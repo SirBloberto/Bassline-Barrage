@@ -1,12 +1,28 @@
-[gd_scene load_steps=20 format=3 uid="uid://dec8n1lcfldfc"]
+[gd_scene load_steps=23 format=3 uid="uid://dec8n1lcfldfc"]
 
 [ext_resource type="Script" uid="uid://c4ea7tomkdspi" path="res://entities/enemy/enemy.gd" id="1_ksmh7"]
 [ext_resource type="Texture2D" uid="uid://ct4m4e5mxrxa6" path="res://resources/sprites/character_sprites.png" id="2_3fvr7"]
+[ext_resource type="Shader" uid="uid://3qtt18cmcq40" path="res://resources/shader/person_customiser.gdshader" id="2_4wwj3"]
 [ext_resource type="Script" uid="uid://d3xlrnop14c6w" path="res://entities/components/health/health.gd" id="2_im2q6"]
+[ext_resource type="Script" uid="uid://5tu01f6e7vnx" path="res://entities/components/colour_customizer.gd" id="3_dt443"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tir2s"]
 radius = 6.0
 height = 16.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d50e0"]
+shader = ExtResource("2_4wwj3")
+shader_parameter/colour_tolerance = 0.01
+shader_parameter/outline_relative_brightness = 0.7
+shader_parameter/skin_colour = Color(0, 0, 0, 1)
+shader_parameter/shirt_colour = Color(0, 0, 0, 1)
+shader_parameter/pants_colour = Color(0, 0, 0, 1)
+shader_parameter/skin_base = Color(0.996, 0.804, 0.455, 1)
+shader_parameter/skin_outline = Color(0.933, 0.486, 0.341, 1)
+shader_parameter/shirt_base = Color(0.655, 0.945, 0.443, 1)
+shader_parameter/shirt_outline = Color(0.224, 0.714, 0.392, 1)
+shader_parameter/pants_base = Color(0.447, 0.937, 0.965, 1)
+shader_parameter/pants_outline = Color(0.231, 0.365, 0.788, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jfjhj"]
 atlas = ExtResource("2_3fvr7")
@@ -146,8 +162,13 @@ script = ExtResource("1_ksmh7")
 shape = SubResource("CapsuleShape2D_tir2s")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_d50e0")
 sprite_frames = SubResource("SpriteFrames_tir2s")
 animation = &"idle_down"
+script = ExtResource("3_dt443")
+skin_colours = Array[Color]([Color(0, 0, 0, 1)])
+shirt_colours = Array[Color]([Color(0, 0, 0, 1)])
+pant_colours = Array[Color]([Color(0, 0, 0, 1)])
 
 [node name="Timer" type="Timer" parent="."]
 

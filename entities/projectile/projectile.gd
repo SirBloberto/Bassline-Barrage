@@ -14,11 +14,11 @@ const ENEMY_LAYER: int = 4
 
 func _ready() -> void:
 	if friendly:
-		collision_layer = 1 << (FRIENDLY_LAYER - 1)
-		collision_mask = WALL_LAYER + 1 << (ENEMY_LAYER - 1)
+		collision_layer = 1 << FRIENDLY_LAYER
+		collision_mask |= 1 << (ENEMY_LAYER - 1)
 	else:
-		collision_layer = 1 << (ENEMY_LAYER - 1)
-		collision_mask = WALL_LAYER + 1 << (FRIENDLY_LAYER - 1)
+		collision_layer = 1 << ENEMY_LAYER
+		collision_mask |= 1 << (FRIENDLY_LAYER - 1)
 
 
 func _on_body_entered(body: Node) -> void:

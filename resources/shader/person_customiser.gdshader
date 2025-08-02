@@ -16,19 +16,22 @@ uniform vec3 pants_base: source_color = vec3(0.447, 0.937, 0.965);
 uniform vec3 pants_outline: source_color = vec3(0.231, 0.365, 0.788);
 
 void fragment() {
+	vec3 colour = COLOR.rgb;
 	
 	if (distance(COLOR.rgb, skin_outline) < colour_tolerance)
-		COLOR.rgb = skin_colour * outline_relative_brightness;
+		colour.rgb = skin_colour * outline_relative_brightness;
 	if (distance(COLOR.rgb, skin_base) < colour_tolerance)
-		COLOR.rgb = skin_colour;
+		colour.rgb = skin_colour;
 	
 	if (distance(COLOR.rgb, shirt_base) < colour_tolerance)
-		COLOR.rgb = shirt_colour;
+		colour.rgb = shirt_colour;
 	if (distance(COLOR.rgb, shirt_outline) < colour_tolerance)
-		COLOR.rgb = shirt_colour * outline_relative_brightness;
+		colour.rgb = shirt_colour * outline_relative_brightness;
 		
 	if (distance(COLOR.rgb, pants_base) < colour_tolerance)
-		COLOR.rgb = pants_colour;
+		colour.rgb = pants_colour;
 	if (distance(COLOR.rgb, pants_outline) < colour_tolerance)
-		COLOR.rgb = pants_colour * outline_relative_brightness;
+		colour.rgb = pants_colour * outline_relative_brightness;
+	
+	COLOR.rgb = colour;
 }

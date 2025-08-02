@@ -6,6 +6,7 @@ class_name KidThrower
 @onready var sprite: AnimatedSprite2D = $Sprite
 
 var is_throwing: bool = true
+var direction_to_player: Vector2 = Vector2.ZERO
 
 
 func _ready() -> void:
@@ -14,6 +15,13 @@ func _ready() -> void:
 	var start_timer = get_tree().create_timer(randomized_offset)
 	await start_timer.timeout
 	timer.start(timer.wait_time + (randf() - 0.5) * 2.0)
+
+
+func _physics_process(_delta: float) -> void:
+	if not can_see:
+		return
+	var difference: Vector2 = (player.position - position).normalized()
+	direction_to_player = Vector2(difference.x, 0) if abs(difference.x) > abs(difference.y) else Vector2(0, difference.y)
 
 
 func _on_timer_timeout() -> void:
