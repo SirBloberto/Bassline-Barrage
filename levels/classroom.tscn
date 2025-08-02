@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://dhtxmogim2ox6"]
+[gd_scene load_steps=18 format=3 uid="uid://dhtxmogim2ox6"]
 
 [ext_resource type="Texture2D" uid="uid://qr3hq4jbnpjb" path="res://resources/level_art/classroom_level.png" id="1_18giq"]
+[ext_resource type="Script" uid="uid://cw5ri075h0pjp" path="res://levels/level.gd" id="1_q7mmc"]
 [ext_resource type="PackedScene" uid="uid://jixp2yo2h4ng" path="res://entities/player/player.tscn" id="2_q7mmc"]
 [ext_resource type="PackedScene" uid="uid://cidmv7oym7bu7" path="res://entities/enemy/kid_thrower/kid_thrower.tscn" id="3_c6dbt"]
 
@@ -52,7 +53,13 @@ size = Vector2(16, 25)
 resource_local_to_scene = true
 size = Vector2(16, 25)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ev1ci"]
+resource_local_to_scene = true
+size = Vector2(80, 32)
+
 [node name="Classroom" type="Node2D"]
+script = ExtResource("1_q7mmc")
+popularity_requirement = 12
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(152, 88)
@@ -65,68 +72,57 @@ scale = Vector2(1, 1)
 [node name="Kids" type="Node2D" parent="."]
 
 [node name="KidThrower" parent="Kids" node_paths=PackedStringArray("player") instance=ExtResource("3_c6dbt")]
-visible = false
 position = Vector2(168, 122)
 player = NodePath("../../Player")
 
 [node name="KidThrower2" parent="Kids" node_paths=PackedStringArray("player") instance=ExtResource("3_c6dbt")]
-visible = false
 position = Vector2(184, 122)
 player = NodePath("../../Player")
 
 [node name="KidThrower3" parent="Kids" node_paths=PackedStringArray("player") instance=ExtResource("3_c6dbt")]
-visible = false
 position = Vector2(217, 122)
 player = NodePath("../../Player")
 
 [node name="KidThrower4" parent="Kids" node_paths=PackedStringArray("player") instance=ExtResource("3_c6dbt")]
-visible = false
 position = Vector2(232, 122)
 player = NodePath("../../Player")
 
 [node name="KidThrower5" parent="Kids" node_paths=PackedStringArray("player") instance=ExtResource("3_c6dbt")]
-visible = false
 position = Vector2(264, 123)
 player = NodePath("../../Player")
 
 [node name="KidThrower6" parent="Kids" node_paths=PackedStringArray("player") instance=ExtResource("3_c6dbt")]
-visible = false
 position = Vector2(280, 123)
 player = NodePath("../../Player")
 
 [node name="KidThrower7" parent="Kids" node_paths=PackedStringArray("player") instance=ExtResource("3_c6dbt")]
-visible = false
 position = Vector2(168, 89)
 player = NodePath("../../Player")
 
 [node name="KidThrower8" parent="Kids" node_paths=PackedStringArray("player") instance=ExtResource("3_c6dbt")]
-visible = false
 position = Vector2(184, 89)
 player = NodePath("../../Player")
 
 [node name="KidThrower9" parent="Kids" node_paths=PackedStringArray("player") instance=ExtResource("3_c6dbt")]
-visible = false
 position = Vector2(216, 90)
 player = NodePath("../../Player")
 
 [node name="KidThrower10" parent="Kids" node_paths=PackedStringArray("player") instance=ExtResource("3_c6dbt")]
-visible = false
 position = Vector2(232, 90)
 player = NodePath("../../Player")
 
 [node name="KidThrower11" parent="Kids" node_paths=PackedStringArray("player") instance=ExtResource("3_c6dbt")]
-visible = false
 position = Vector2(264, 90)
 player = NodePath("../../Player")
 
 [node name="KidThrower12" parent="Kids" node_paths=PackedStringArray("player") instance=ExtResource("3_c6dbt")]
-visible = false
 position = Vector2(280, 90)
 player = NodePath("../../Player")
 
 [node name="Walls" type="Node2D" parent="."]
 
 [node name="Desks" type="StaticBody2D" parent="Walls"]
+collision_layer = 32
 collision_mask = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Desks"]
@@ -199,3 +195,7 @@ shape = SubResource("RectangleShape2D_30rvn")
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Walls/Walls"]
 position = Vector2(88, 99.5)
 shape = SubResource("RectangleShape2D_lemre")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Walls/Walls"]
+position = Vector2(56, 16)
+shape = SubResource("RectangleShape2D_ev1ci")

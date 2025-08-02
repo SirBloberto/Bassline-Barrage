@@ -4,8 +4,13 @@
 [ext_resource type="Script" uid="uid://3vossw7hb884" path="res://entities/enemy/kid_thrower/kid_thrower.gd" id="2_gmrdj"]
 
 [node name="KidThrower" instance=ExtResource("1_pfb2y")]
+collision_layer = 8
+collision_mask = 13
 script = ExtResource("2_gmrdj")
 view_distance = 5.0
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, 1)
 
 [node name="Timer" parent="." index="2"]
 wait_time = 3.0
@@ -14,5 +19,6 @@ one_shot = true
 [node name="Health" parent="." index="3"]
 health = 3
 
+[connection signal="can_see_changed" from="." to="." method="_on_can_see_changed"]
 [connection signal="animation_looped" from="Sprite" to="." method="_on_sprite_animation_looped"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

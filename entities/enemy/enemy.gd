@@ -17,4 +17,12 @@ var can_see: bool = false:
 
 
 func _physics_process(_delta: float) -> void:
-	can_see = (position - player.position).length() > view_distance
+	can_see = (position - player.position).length() < view_distance
+
+
+func _on_health_damaged() -> void:
+	pass # Flash white
+
+
+func _on_health_died() -> void:
+	pass # Increase popularity.  Give a thumbs up

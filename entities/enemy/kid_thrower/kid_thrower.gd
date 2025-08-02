@@ -28,3 +28,12 @@ func _on_sprite_animation_looped() -> void:
 	sprite.animation = "idle_up"
 	timer.start(timer.wait_time + (randf() - 0.5) * 2.0)
 	is_throwing = false
+
+
+func _on_can_see_changed() -> void:
+	if is_throwing:
+		return
+	if can_see:
+		timer.start()
+	else:
+		timer.stop()

@@ -5,6 +5,8 @@
 [ext_resource type="Script" uid="uid://d3xlrnop14c6w" path="res://entities/components/health/health.gd" id="2_im2q6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tir2s"]
+radius = 6.0
+height = 16.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jfjhj"]
 atlas = ExtResource("2_3fvr7")
@@ -152,3 +154,6 @@ animation = &"idle_down"
 [node name="Health" type="Node" parent="."]
 script = ExtResource("2_im2q6")
 metadata/_custom_type_script = "uid://d3xlrnop14c6w"
+
+[connection signal="damaged" from="Health" to="." method="_on_health_damaged"]
+[connection signal="died" from="Health" to="." method="_on_health_died"]
