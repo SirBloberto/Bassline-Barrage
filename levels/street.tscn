@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwtm6hl8u7j8f"]
+
+[ext_resource type="Texture2D" uid="uid://dllvjvyvo8w5g" path="res://resources/level_art/street_level_10_9.png" id="1_we44c"]
+
+[node name="Street" type="Sprite2D"]
+position = Vector2(152, 88)
+texture = ExtResource("1_we44c")

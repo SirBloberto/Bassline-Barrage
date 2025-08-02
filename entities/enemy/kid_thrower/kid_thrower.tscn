@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cidmv7oym7bu7"]
+
+[ext_resource type="PackedScene" uid="uid://dec8n1lcfldfc" path="res://entities/enemy/enemy.tscn" id="1_pfb2y"]
+[ext_resource type="Script" uid="uid://3vossw7hb884" path="res://entities/enemy/kid_thrower/kid_thrower.gd" id="2_gmrdj"]
+
+[node name="KidThrower" instance=ExtResource("1_pfb2y")]
+script = ExtResource("2_gmrdj")
+
+[node name="Sprite" parent="." index="1"]
+scale = Vector2(2, 2)
+
+[node name="Timer" parent="." index="2"]
+wait_time = 3.0
+one_shot = true
+
+[node name="Health" parent="." index="3"]
+health = 3
+
+[connection signal="animation_looped" from="Sprite" to="." method="_on_sprite_animation_looped"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
