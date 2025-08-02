@@ -53,5 +53,5 @@ func _on_timer_timeout() -> void:
 	
 	var projectile = PROJECTILE.instantiate()
 	projectile.global_position = global_position
-	projectile.linear_velocity = relative_position * 500.0
+	projectile.velocity = relative_position * 100.0
 	get_tree().root.add_child(projectile)

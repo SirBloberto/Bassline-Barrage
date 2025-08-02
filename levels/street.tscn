@@ -1,7 +1,53 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwtm6hl8u7j8f"]
+[gd_scene load_steps=6 format=3 uid="uid://cwtm6hl8u7j8f"]
 
 [ext_resource type="Texture2D" uid="uid://dllvjvyvo8w5g" path="res://resources/level_art/street_level_10_9.png" id="1_we44c"]
 
-[node name="Street" type="Sprite2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_we44c"]
+size = Vector2(20, 176)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6267e"]
+size = Vector2(20, 176.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gfgmc"]
+size = Vector2(344, 14.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ydtxv"]
+size = Vector2(80, 29.25)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Street" type="Sprite2D" parent="."]
 position = Vector2(152, 88)
 texture = ExtResource("1_we44c")
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D"]
+position = Vector2(-10, 88)
+shape = SubResource("RectangleShape2D_we44c")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D2"]
+position = Vector2(314, 88.25)
+shape = SubResource("RectangleShape2D_6267e")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D3"]
+position = Vector2(152, -7.75)
+shape = SubResource("RectangleShape2D_gfgmc")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D4"]
+position = Vector2(152, 183)
+shape = SubResource("RectangleShape2D_gfgmc")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D5"]
+position = Vector2(104, 14.375)
+shape = SubResource("RectangleShape2D_ydtxv")

@@ -6,14 +6,16 @@
 [ext_resource type="Script" uid="uid://d3xlrnop14c6w" path="res://entities/components/health/health.gd" id="3_sglur"]
 [ext_resource type="Script" uid="uid://5tu01f6e7vnx" path="res://entities/components/colour_customizer.gd" id="4_8fjmc"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_symyc"]
-radius = 5.0
-height = 14.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_fkugw"]
+radius = 3.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qiwj3"]
 shader = ExtResource("2_fkugw")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
+shader_parameter/skin_colour = Color(0, 0, 0, 1)
+shader_parameter/shirt_colour = Color(0, 0, 0, 1)
+shader_parameter/pants_colour = Color(0, 0, 0, 1)
 shader_parameter/skin_base = Color(0.996, 0.804, 0.455, 1)
 shader_parameter/skin_outline = Color(0.933, 0.486, 0.341, 1)
 shader_parameter/shirt_base = Color(0.655, 0.945, 0.443, 1)
@@ -154,18 +156,16 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(4, 4)
+collision_layer = 2
+collision_mask = 25
 script = ExtResource("1_symyc")
 
 [node name="CollisionShape" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(0, 1)
-shape = SubResource("CapsuleShape2D_symyc")
+position = Vector2(0, 6)
+shape = SubResource("CircleShape2D_fkugw")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_qiwj3")
-instance_shader_parameters/pants_colour = Color(0.447059, 0.937255, 0.964706, 1)
-instance_shader_parameters/shirt_colour = Color(0.654902, 0.945098, 0.443137, 1)
-instance_shader_parameters/skin_colour = Color(0.791999, 0.791999, 0.791999, 1)
 sprite_frames = SubResource("SpriteFrames_qiwj3")
 animation = &"idle_down"
 script = ExtResource("4_8fjmc")
@@ -179,7 +179,8 @@ health = 10
 metadata/_custom_type_script = "uid://d3xlrnop14c6w"
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.2
 autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

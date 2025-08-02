@@ -5,9 +5,7 @@
 
 [node name="KidThrower" instance=ExtResource("1_pfb2y")]
 script = ExtResource("2_gmrdj")
-
-[node name="Sprite" parent="." index="1"]
-scale = Vector2(2, 2)
+view_distance = 5.0
 
 [node name="Timer" parent="." index="2"]
 wait_time = 3.0
