@@ -19,6 +19,7 @@ radius = 3.0
 shader = ExtResource("2_fkugw")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
+shader_parameter/white_amount = 0.0
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -191,7 +192,6 @@ autostart = true
 script = ExtResource("7_26q78")
 
 [node name="UI" type="TextureRect" parent="PlayerHud"]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -200,6 +200,7 @@ grow_vertical = 2
 texture = ExtResource("7_qiwj3")
 
 [node name="Victory" type="Control" parent="PlayerHud"]
+process_mode = 3
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -278,6 +279,7 @@ theme_override_font_sizes/font_size = 28
 text = "Menu"
 
 [node name="Defeat" type="Control" parent="PlayerHud"]
+process_mode = 3
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -356,7 +358,6 @@ offset_top = 11.0
 offset_right = 631.0
 offset_bottom = 29.0
 theme_override_styles/fill = SubResource("StyleBoxFlat_bectd")
-value = 46.29
 show_percentage = false
 
 [node name="Pause" type="Control" parent="PlayerHud"]
@@ -478,6 +479,8 @@ vertical_alignment = 1
 process_mode = 3
 visible = false
 
+[connection signal="damaged" from="Health" to="." method="_on_health_damaged"]
+[connection signal="died" from="Health" to="PlayerHud" method="_on_health_died"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="mouse_entered" from="PlayerHud/Victory/Menu" to="PlayerHud/Victory/Menu" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="PlayerHud/Victory/Menu" to="PlayerHud/Victory/Menu" method="_on_mouse_exited"]
@@ -485,6 +488,7 @@ visible = false
 [connection signal="mouse_entered" from="PlayerHud/Defeat/Menu" to="PlayerHud/Defeat/Menu" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="PlayerHud/Defeat/Menu" to="PlayerHud/Defeat/Menu" method="_on_mouse_exited"]
 [connection signal="pressed" from="PlayerHud/Defeat/Menu" to="PlayerHud" method="_on_menu_pressed"]
+[connection signal="value_changed" from="PlayerHud/ProgressBar" to="PlayerHud" method="_on_progress_bar_value_changed"]
 [connection signal="mouse_entered" from="PlayerHud/Pause/List/Resume" to="PlayerHud/Pause/List/Resume" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="PlayerHud/Pause/List/Resume" to="PlayerHud/Pause/List/Resume" method="_on_mouse_exited"]
 [connection signal="pressed" from="PlayerHud/Pause/List/Resume" to="PlayerHud" method="_on_resume_pressed"]

@@ -4,17 +4,18 @@
 [ext_resource type="Script" uid="uid://43f0oyjq4lmb" path="res://entities/projectile/projectile.gd" id="1_n5n3x"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ilcb0"]
-radius = 2.0
+radius = 6.0
 
 [node name="Projectile" type="Area2D"]
 collision_layer = 4
 script = ExtResource("1_n5n3x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(2, 2)
+scale = Vector2(4, 4)
 shape = SubResource("CircleShape2D_ilcb0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
 texture = ExtResource("1_iqisb")
 region_enabled = true
 region_rect = Rect2(48, 18, 16, 12)

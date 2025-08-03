@@ -9,13 +9,17 @@ const PROJECTILE: PackedScene = preload("res://entities/projectile/projectile.ts
 
 
 @onready var sprite: AnimatedSprite2D = $Sprite
+@onready var hud: PlayerHUD = $PlayerHud
+@onready var progress_bar: ProgressBar = $PlayerHud/ProgressBar
 
 var input: Vector2 = Vector2.ZERO
 var last_direction: Vector2 = Vector2.UP
+var white_amount: float = 0.0
 
 
 func _ready() -> void:
 	sprite.play()
+	Global.player = self
 	
 	if Global.player_customization == null:
 		Global.player_customization = PlayerCustomization.new()
@@ -26,7 +30,7 @@ func _ready() -> void:
 		sprite.player_customization = Global.player_customization
 
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	if input.length() == 0:
 		if last_direction.y < 0 and last_direction.x == 0:
 			sprite.animation = "idle_up"
@@ -45,6 +49,9 @@ func _process(_delta: float) -> void:
 		sprite.animation = "walk_side"
 		sprite.flip_h = input.x < 0
 		last_direction = Vector2(input.x, 0.0)
+	
+	white_amount -= delta * 2.0
+	sprite.material.set_shader_parameter("white_amount", white_amount)
 
 
 func _physics_process(_delta: float) -> void:
@@ -61,7 +68,11 @@ func _on_timer_timeout() -> void:
 	
 	var projectile = PROJECTILE.instantiate()
 	projectile.global_position = global_position
-	projectile.velocity = relative_position * 100.0
+	projectile.direction = relative_position
 	projectile.friendly = true
 	projectile.damage = 1
 	get_tree().root.add_child(projectile)
+
+
+func _on_health_damaged() -> void:
+	white_amount = 1.0

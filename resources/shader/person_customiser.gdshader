@@ -2,6 +2,7 @@ shader_type canvas_item;
 
 uniform float colour_tolerance = 0.01;
 uniform float outline_relative_brightness = 0.7;
+uniform float white_amount: hint_range(0.0, 1.0) = 0.0;
 
 uniform vec3 skin_colour: source_color;
 uniform vec3 shirt_colour: source_color;
@@ -34,4 +35,7 @@ void fragment() {
 		colour.rgb = pants_colour * outline_relative_brightness;
 	
 	COLOR.rgb = colour;
+	
+	if (white_amount >= 0.0)
+		COLOR.rgb = mix(COLOR.rgb, vec3(1.0), white_amount);
 }

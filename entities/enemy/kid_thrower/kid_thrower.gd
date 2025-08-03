@@ -3,7 +3,6 @@ class_name KidThrower
 
 
 @onready var timer: Timer = $Timer
-@onready var sprite: AnimatedSprite2D = $Sprite
 
 var is_throwing: bool = true
 var direction_to_player: Vector2 = Vector2.ZERO
@@ -17,7 +16,8 @@ func _ready() -> void:
 	timer.start(timer.wait_time + (randf() - 0.5) * 2.0)
 
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
+	super._physics_process(delta)
 	if not can_see:
 		return
 	var difference: Vector2 = (player.position - position).normalized()

@@ -5,7 +5,7 @@ class_name ConcertAttendee
 var tween: Tween
 
 
-const MAX_HEIGHT: float = 4
+const MAX_HEIGHT: float = 8
 
 var current_value: float = randf() * 3.0
 var jump_period: float = 0.14 * randf() + 0.14

@@ -2,9 +2,10 @@ extends Area2D
 class_name Projectile
 
 
-var velocity: Vector2
+var direction: Vector2
 var friendly: bool = false
 var damage: int = 1
+var speed: float
 
 
 const WALL_LAYER: int = 1
@@ -19,6 +20,7 @@ func _ready() -> void:
 	else:
 		collision_layer = 1 << ENEMY_LAYER
 		collision_mask |= 1 << (FRIENDLY_LAYER - 1)
+	direction.normalized()
 
 
 func _on_body_entered(body: Node) -> void:
@@ -28,4 +30,4 @@ func _on_body_entered(body: Node) -> void:
 
 
 func _physics_process(delta: float) -> void:
-	position += velocity * delta
+	position += direction * delta * 400.0

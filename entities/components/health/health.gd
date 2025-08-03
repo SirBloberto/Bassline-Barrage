@@ -11,5 +11,8 @@ signal died
 		health = value
 		if health <= 0:
 			died.emit()
+			is_alive = false
 		else:
 			damaged.emit()
+
+var is_alive: bool = true

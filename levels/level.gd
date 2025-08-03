@@ -21,3 +21,5 @@ var popularity: int = 0:
 
 func _ready() -> void:
 	camera.target = player
+	Global.level = self
+	player.progress_bar.max_value = popularity_requirement

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dec8n1lcfldfc"]
+[gd_scene load_steps=35 format=3 uid="uid://dec8n1lcfldfc"]
 
 [ext_resource type="Script" uid="uid://c4ea7tomkdspi" path="res://entities/enemy/enemy.gd" id="1_ksmh7"]
 [ext_resource type="Texture2D" uid="uid://ct4m4e5mxrxa6" path="res://resources/sprites/character_sprites.png" id="2_3fvr7"]
@@ -6,16 +6,18 @@
 [ext_resource type="Script" uid="uid://d3xlrnop14c6w" path="res://entities/components/health/health.gd" id="2_im2q6"]
 [ext_resource type="Script" uid="uid://5tu01f6e7vnx" path="res://entities/components/colour_customizer.gd" id="3_dt443"]
 [ext_resource type="PackedScene" uid="uid://slnawtswnvby" path="res://entities/particles/particles_upset.tscn" id="6_d50e0"]
+[ext_resource type="PackedScene" uid="uid://dt57dj45c7fgm" path="res://entities/particles/particles_happy.tscn" id="7_61ikd"]
+[ext_resource type="AudioStream" uid="uid://bteueo2yokqxo" path="res://resources/audio/sfx/recruited.ogg" id="7_721x4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tir2s"]
 radius = 6.0
 height = 16.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4wwj3"]
-resource_local_to_scene = true
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_721x4"]
 shader = ExtResource("2_4wwj3")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
+shader_parameter/white_amount = 0.0
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -81,6 +83,42 @@ region = Rect2(32, 96, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_61ikd"]
 atlas = ExtResource("2_3fvr7")
 region = Rect2(48, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mv3s"]
+atlas = ExtResource("2_3fvr7")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kh7fx"]
+atlas = ExtResource("2_3fvr7")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5s4bh"]
+atlas = ExtResource("2_3fvr7")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vr86x"]
+atlas = ExtResource("2_3fvr7")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fktuf"]
+atlas = ExtResource("2_3fvr7")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v82o1"]
+atlas = ExtResource("2_3fvr7")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pd1ga"]
+atlas = ExtResource("2_3fvr7")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1trp4"]
+atlas = ExtResource("2_3fvr7")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xowvs"]
+atlas = ExtResource("2_3fvr7")
+region = Rect2(32, 32, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tir2s"]
 animations = [{
@@ -155,6 +193,48 @@ animations = [{
 "loop": true,
 "name": &"throw_up",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0mv3s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kh7fx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5s4bh")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vr86x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fktuf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v82o1")
+}],
+"loop": true,
+"name": &"walk_side",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pd1ga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1trp4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xowvs")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 10.0
 }]
 
 [node name="Enemy" type="CharacterBody2D"]
@@ -164,9 +244,9 @@ script = ExtResource("1_ksmh7")
 shape = SubResource("CapsuleShape2D_tir2s")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
-material = SubResource("ShaderMaterial_4wwj3")
+material = SubResource("ShaderMaterial_721x4")
 sprite_frames = SubResource("SpriteFrames_tir2s")
-animation = &"idle_down"
+animation = &"walk_down"
 script = ExtResource("3_dt443")
 
 [node name="Timer" type="Timer" parent="."]
@@ -176,6 +256,12 @@ script = ExtResource("2_im2q6")
 metadata/_custom_type_script = "uid://d3xlrnop14c6w"
 
 [node name="ParticlesUpset" parent="." instance=ExtResource("6_d50e0")]
+
+[node name="ConvertSoundEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_721x4")
+
+[node name="ParticlesHappy" parent="." instance=ExtResource("7_61ikd")]
+visible = false
 
 [connection signal="damaged" from="Health" to="." method="_on_health_damaged"]
 [connection signal="died" from="Health" to="." method="_on_health_died"]

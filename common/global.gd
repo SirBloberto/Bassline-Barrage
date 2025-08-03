@@ -4,6 +4,8 @@ extends Node
 var settings: Settings
 var player_customization: PlayerCustomization
 var player_beat: PlayerBeat
+var player: Player
+var level: Level
 
 #Previous player beat and track.  We should save this if we win
 

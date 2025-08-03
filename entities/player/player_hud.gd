@@ -6,6 +6,7 @@ class_name PlayerHUD
 @onready var defeat: Control = $Defeat
 @onready var pause: Control = $Pause
 @onready var settings_menu: Control = $SettingsMenu
+@onready var progress_bar: ProgressBar = $ProgressBar
 
 
 func _physics_process(_delta: float) -> void:
@@ -29,3 +30,13 @@ func _on_settings_pressed() -> void:
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_health_died() -> void:
+	defeat.show()
+	get_tree().paused = true
+
+
+func _on_progress_bar_value_changed(value: float) -> void:
+	if value >= progress_bar.max_value:
+		Global.level.victory.emit()
