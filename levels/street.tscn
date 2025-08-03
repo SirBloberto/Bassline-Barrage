@@ -26,57 +26,74 @@ radius = 3.0
 height = 12.0
 
 [node name="Street" type="Node2D"]
+y_sort_enabled = true
 scale = Vector2(4, 4)
 script = ExtResource("1_6267e")
 popularity_requirement = 25
 
 [node name="Street" type="Sprite2D" parent="."]
+y_sort_enabled = true
 position = Vector2(152, 88)
 texture = ExtResource("1_we44c")
 
 [node name="Sprite2D" type="Sprite2D" parent="Street"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(16, 80)
 texture = ExtResource("3_gfgmc")
 region_enabled = true
 region_rect = Rect2(32, 16, 16, 16)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Street"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(32, 80)
 texture = ExtResource("3_gfgmc")
 region_enabled = true
 region_rect = Rect2(32, 16, 16, 16)
 
 [node name="Sprite2D3" type="Sprite2D" parent="Street"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(48, 80)
 texture = ExtResource("3_gfgmc")
 region_enabled = true
 region_rect = Rect2(32, 16, 16, 16)
 
 [node name="Sprite2D4" type="Sprite2D" parent="Street"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(64, 80)
 texture = ExtResource("3_gfgmc")
 region_enabled = true
 region_rect = Rect2(32, 16, 16, 16)
 
 [node name="Sprite2D5" type="Sprite2D" parent="Street"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(144, -33)
 texture = ExtResource("3_gfgmc")
 region_enabled = true
 region_rect = Rect2(16, 16, 16, 16)
 
 [node name="Sprite2D6" type="Sprite2D" parent="Street"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(128, 80)
 texture = ExtResource("3_gfgmc")
 region_enabled = true
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="Sprite2D7" type="Sprite2D" parent="Street"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(144, 80)
 texture = ExtResource("3_gfgmc")
 region_enabled = true
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="Walls" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="Walls" type="StaticBody2D" parent="Walls"]
 collision_mask = 30
@@ -102,40 +119,52 @@ position = Vector2(314, 88.25)
 shape = SubResource("RectangleShape2D_6267e")
 
 [node name="LowWalls" type="StaticBody2D" parent="Walls"]
+y_sort_enabled = true
 collision_layer = 32
 collision_mask = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/LowWalls"]
+y_sort_enabled = true
 position = Vector2(24, 34)
 shape = SubResource("CircleShape2D_we44c")
 
 [node name="Sprite2D" type="Sprite2D" parent="Walls/LowWalls/CollisionShape2D"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(0, -3)
 texture = ExtResource("3_gfgmc")
 region_enabled = true
 region_rect = Rect2(64, 16, 16, 16)
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Walls/LowWalls"]
+y_sort_enabled = true
 position = Vector2(296, 72)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_we44c")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Walls/LowWalls"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(296, 72)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_we44c")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Walls/LowWalls"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(296, 61)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_we44c")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Walls/LowWalls"]
+y_sort_enabled = true
 position = Vector2(152, 12)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_we44c")
 
 [node name="Sprite2D" type="Sprite2D" parent="Walls/LowWalls/CollisionShape2D10"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(-5, 1.95503e-05)
 rotation = -1.57603
 texture = ExtResource("3_gfgmc")
@@ -143,11 +172,14 @@ region_enabled = true
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Walls/LowWalls"]
+y_sort_enabled = true
 position = Vector2(57, 27)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_we44c")
 
 [node name="Sprite2D" type="Sprite2D" parent="Walls/LowWalls/CollisionShape2D11"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(-5, 1.9743e-05)
 rotation = -1.5708
 texture = ExtResource("3_gfgmc")
@@ -155,11 +187,14 @@ region_enabled = true
 region_rect = Rect2(16, 0, 16, 16)
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Walls/LowWalls"]
+y_sort_enabled = true
 position = Vector2(40, 109)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_we44c")
 
 [node name="Sprite2D" type="Sprite2D" parent="Walls/LowWalls/CollisionShape2D12"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(-3, 1.24946e-05)
 rotation = -1.5708
 texture = ExtResource("3_gfgmc")
@@ -167,11 +202,14 @@ region_enabled = true
 region_rect = Rect2(32, 16, 16, 16)
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="Walls/LowWalls"]
+y_sort_enabled = true
 position = Vector2(120, 156)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_we44c")
 
 [node name="Sprite2D" type="Sprite2D" parent="Walls/LowWalls/CollisionShape2D13"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(-5, 1.92523e-05)
 rotation = -1.5708
 texture = ExtResource("3_gfgmc")
@@ -179,21 +217,28 @@ region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="Walls/LowWalls"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(280, 173)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_we44c")
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="Walls/LowWalls"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(296, 173)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_we44c")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="Walls/LowWalls"]
+y_sort_enabled = true
 position = Vector2(297, 155)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_we44c")
 
 [node name="Sprite2D" type="Sprite2D" parent="Walls/LowWalls/CollisionShape2D16"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(-5.00001, 1.6884e-05)
 rotation = -1.5708
 texture = ExtResource("3_gfgmc")
@@ -201,31 +246,42 @@ region_enabled = true
 region_rect = Rect2(32, 0, 16, 16)
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="Walls/LowWalls"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(216, 174)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_we44c")
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="Walls/LowWalls"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(200, 174)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_we44c")
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="Walls/LowWalls"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(184, 174)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_we44c")
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="Walls/LowWalls"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(168, 174)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_we44c")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Walls/LowWalls"]
+y_sort_enabled = true
 position = Vector2(87, 126)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_we44c")
 
 [node name="Sprite2D" type="Sprite2D" parent="Walls/LowWalls/CollisionShape2D6"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(-6, 2.0586e-05)
 rotation = -1.5708
 texture = ExtResource("3_gfgmc")
@@ -233,6 +289,8 @@ region_enabled = true
 region_rect = Rect2(16, 16, 16, 16)
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Walls/LowWalls"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(55, 104)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_we44c")
@@ -241,4 +299,6 @@ shape = SubResource("CapsuleShape2D_we44c")
 max_camera = Vector2(304, 176)
 
 [node name="Player" parent="." instance=ExtResource("5_23ehr")]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(200, 6)
