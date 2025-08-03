@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://jixp2yo2h4ng"]
+[gd_scene load_steps=30 format=3 uid="uid://jixp2yo2h4ng"]
 
 [ext_resource type="Script" uid="uid://eqncict3w17y" path="res://entities/player/player.gd" id="1_symyc"]
 [ext_resource type="Shader" uid="uid://3qtt18cmcq40" path="res://resources/shader/person_customiser.gdshader" id="2_fkugw"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://00v7k67xpusu" path="res://resources/ui_components/HUD.png" id="7_qiwj3"]
 [ext_resource type="Script" uid="uid://dgi6lolw2kg32" path="res://ui/hover_button.gd" id="9_bectd"]
 [ext_resource type="Texture2D" uid="uid://cs06phbh864nt" path="res://resources/ui_components/menu_button.png" id="9_wvtmh"]
+[ext_resource type="FontFile" uid="uid://dafxjxaalh14y" path="res://resources/font/Tiny5-Regular.ttf" id="10_7thud"]
 [ext_resource type="PackedScene" uid="uid://cumjitqfsfau0" path="res://ui/settings_menu/settings_menu.tscn" id="11_7thud"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fkugw"]
@@ -407,6 +408,7 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_7thud")
 theme_override_font_sizes/font_size = 28
 text = "Resume"
 horizontal_alignment = 1
@@ -436,6 +438,7 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_7thud")
 theme_override_font_sizes/font_size = 28
 text = "Settings"
 horizontal_alignment = 1
@@ -465,6 +468,7 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_7thud")
 theme_override_font_sizes/font_size = 28
 text = "Quit"
 horizontal_alignment = 1

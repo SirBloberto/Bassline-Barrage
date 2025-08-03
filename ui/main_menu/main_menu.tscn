@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bnvisxcx45eml"]
+[gd_scene load_steps=9 format=3 uid="uid://bnvisxcx45eml"]
 
 [ext_resource type="Script" uid="uid://detappavtqek7" path="res://ui/main_menu/main_menu.gd" id="1_3c04x"]
 [ext_resource type="Texture2D" uid="uid://dpc8rm4pqowh3" path="res://resources/ui_components/ui_page_bg.png" id="1_i5wg5"]
 [ext_resource type="Texture2D" uid="uid://c41csmiboigsk" path="res://resources/ui_components/title_160_80.png" id="2_3c04x"]
 [ext_resource type="Texture2D" uid="uid://cs06phbh864nt" path="res://resources/ui_components/menu_button.png" id="3_joh67"]
 [ext_resource type="Script" uid="uid://dgi6lolw2kg32" path="res://ui/hover_button.gd" id="4_u184e"]
+[ext_resource type="FontFile" uid="uid://dafxjxaalh14y" path="res://resources/font/Tiny5-Regular.ttf" id="6_6mijq"]
 [ext_resource type="AudioStream" uid="uid://m651cc6hqoag" path="res://resources/audio/track2/backing.ogg" id="6_joh67"]
 [ext_resource type="PackedScene" uid="uid://cumjitqfsfau0" path="res://ui/settings_menu/settings_menu.tscn" id="7_u184e"]
 
@@ -73,7 +74,8 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("6_6mijq")
+theme_override_font_sizes/font_size = 38
 text = "Play"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -113,7 +115,8 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("6_6mijq")
+theme_override_font_sizes/font_size = 38
 text = "Settings"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -153,7 +156,8 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("6_6mijq")
+theme_override_font_sizes/font_size = 38
 text = "Exit"
 horizontal_alignment = 1
 vertical_alignment = 1
