@@ -1,10 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://dhtxmogim2ox6"]
+[gd_scene load_steps=20 format=3 uid="uid://dhtxmogim2ox6"]
 
 [ext_resource type="Texture2D" uid="uid://qr3hq4jbnpjb" path="res://resources/level_art/classroom_level.png" id="1_18giq"]
 [ext_resource type="Script" uid="uid://cw5ri075h0pjp" path="res://levels/level.gd" id="1_q7mmc"]
 [ext_resource type="PackedScene" uid="uid://jixp2yo2h4ng" path="res://entities/player/player.tscn" id="2_q7mmc"]
 [ext_resource type="PackedScene" uid="uid://cidmv7oym7bu7" path="res://entities/enemy/kid_thrower/kid_thrower.tscn" id="3_c6dbt"]
 [ext_resource type="Texture2D" uid="uid://cih7oak2jty7y" path="res://resources/tilesets/classroom_accessories.png" id="3_wvp5p"]
+[ext_resource type="PackedScene" uid="uid://d4jpqoa3dm2bs" path="res://entities/camera/camera.tscn" id="6_wvp5p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18giq"]
 resource_local_to_scene = true
@@ -59,6 +60,7 @@ resource_local_to_scene = true
 size = Vector2(80, 32)
 
 [node name="Classroom" type="Node2D"]
+scale = Vector2(4, 4)
 script = ExtResource("1_q7mmc")
 popularity_requirement = 12
 
@@ -117,7 +119,6 @@ region_rect = Rect2(0, 16, 16, 16)
 
 [node name="Player" parent="." instance=ExtResource("2_q7mmc")]
 position = Vector2(24, 45)
-scale = Vector2(1, 1)
 
 [node name="Kids" type="Node2D" parent="."]
 
@@ -274,3 +275,6 @@ shape = SubResource("RectangleShape2D_lemre")
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Walls/Walls"]
 position = Vector2(56, 16)
 shape = SubResource("RectangleShape2D_ev1ci")
+
+[node name="Camera" parent="." instance=ExtResource("6_wvp5p")]
+max_camera = Vector2(292, 176)

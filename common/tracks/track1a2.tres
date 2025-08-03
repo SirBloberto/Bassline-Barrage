@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Track" load_steps=2 format=3 uid="uid://dg21sfuncyx5v"]
+
+[ext_resource type="Script" uid="uid://djg1kfh0nkeg5" path="res://common/track.gd" id="1_rjwxo"]
+
+[resource]
+script = ExtResource("1_rjwxo")
+beats = Dictionary[float, int]({})
+metadata/_custom_type_script = "uid://djg1kfh0nkeg5"

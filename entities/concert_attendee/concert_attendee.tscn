@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://c5tp61bqm06wy"]
+
+[ext_resource type="Shader" uid="uid://3qtt18cmcq40" path="res://resources/shader/person_customiser.gdshader" id="1_w4y75"]
+[ext_resource type="Texture2D" uid="uid://ct4m4e5mxrxa6" path="res://resources/sprites/character_sprites.png" id="1_yk651"]
+[ext_resource type="Script" uid="uid://dxt81id88lv5d" path="res://entities/concert_attendee/concert_attendee.gd" id="2_tvmt5"]
+[ext_resource type="PackedScene" uid="uid://dt57dj45c7fgm" path="res://entities/particles/particles_happy.tscn" id="4_1rjjh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w4y75"]
+resource_local_to_scene = true
+shader = ExtResource("1_w4y75")
+shader_parameter/colour_tolerance = 0.01
+shader_parameter/outline_relative_brightness = 0.7
+shader_parameter/skin_colour = Color(0, 0, 0, 1)
+shader_parameter/shirt_colour = Color(0, 0, 0, 1)
+shader_parameter/pants_colour = Color(0, 0, 0, 1)
+shader_parameter/skin_base = Color(0.996, 0.804, 0.455, 1)
+shader_parameter/skin_outline = Color(0.933, 0.486, 0.341, 1)
+shader_parameter/shirt_base = Color(0.655, 0.945, 0.443, 1)
+shader_parameter/shirt_outline = Color(0.224, 0.714, 0.392, 1)
+shader_parameter/pants_base = Color(0.447, 0.937, 0.965, 1)
+shader_parameter/pants_outline = Color(0.231, 0.365, 0.788, 1)
+
+[node name="ConcertAttendee" type="Sprite2D"]
+material = SubResource("ShaderMaterial_w4y75")
+texture = ExtResource("1_yk651")
+region_enabled = true
+region_rect = Rect2(0, 32, 16, 16)
+script = ExtResource("2_tvmt5")
+
+[node name="ParticlesHappy" parent="." instance=ExtResource("4_1rjjh")]

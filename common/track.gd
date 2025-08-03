@@ -6,5 +6,5 @@ enum ShotType { SINGLE, DOUBLE, SHOTGUN_SINGLE, SHOTGUN_DOUBLE }
 
 
 @export var icon: ImageTexture
-@export var track: AudioStream
-@export var beats: Dictionary[float, ShotType]
+@export var tracks: Array[AudioStream]
+#@export var beats: Dictionary[float, int]

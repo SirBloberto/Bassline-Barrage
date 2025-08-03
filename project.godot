@@ -11,9 +11,12 @@ config_version=5
 [application]
 
 config/name="Bassline Barrage"
-run/main_scene="uid://dhtxmogim2ox6"
+config/version="1.0"
+run/main_scene="uid://bnvisxcx45eml"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0.101961, 0.113725, 0.176471, 1)
+config/icon="uid://b3fcsrik4taiq"
+config/windows_native_icon="res://resources/icon_simple.ico"
 
 [autoload]
 
@@ -21,11 +24,12 @@ Global="*res://common/global.gd"
 
 [display]
 
-window/size/viewport_width=160
-window/size/viewport_height=144
+window/size/viewport_width=640
+window/size/viewport_height=576
+window/size/resizable=false
 window/size/window_width_override=640
-window/size/window_height_override=528
-window/stretch/scale=3.0
+window/size/window_height_override=576
+window/stretch/mode="viewport"
 
 [input]
 

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dpc8rm4pqowh3" path="res://resources/ui_components/ui_page_bg.png" id="1_i5wg5"]
 [ext_resource type="Texture2D" uid="uid://c41csmiboigsk" path="res://resources/ui_components/title_160_80.png" id="2_3c04x"]
 [ext_resource type="Texture2D" uid="uid://cs06phbh864nt" path="res://resources/ui_components/menu_button.png" id="3_joh67"]
-[ext_resource type="Script" uid="uid://dgi6lolw2kg32" path="res://ui/hover_button.gd" id="4_u184e"]
+[ext_resource type="Script" path="res://ui/hover_button.gd" id="4_u184e"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -16,48 +16,138 @@ grow_vertical = 2
 script = ExtResource("1_3c04x")
 
 [node name="bg_color" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_i5wg5")
 
 [node name="title" type="TextureRect" parent="."]
-layout_mode = 0
-offset_top = 3.0
-offset_right = 160.0
-offset_bottom = 83.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -319.0
+offset_right = 319.0
+offset_bottom = 309.0
+grow_horizontal = 2
 texture = ExtResource("2_3c04x")
 
 [node name="Start Button" type="TextureButton" parent="."]
 self_modulate = Color(0.654902, 0.941176, 0.439216, 1)
-layout_mode = 0
-offset_left = 48.0
-offset_top = 83.0
-offset_right = 112.0
-offset_bottom = 99.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = 32.0
+offset_right = 128.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
 action_mode = 0
 texture_normal = ExtResource("3_joh67")
+ignore_texture_size = true
+stretch_mode = 0
 script = ExtResource("4_u184e")
+
+[node name="Label" type="Label" parent="Start Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Settings Button" type="TextureButton" parent="."]
 self_modulate = Color(0.45098, 0.937255, 0.968627, 1)
-offset_left = 48.0
-offset_top = 103.0
-offset_right = 112.0
-offset_bottom = 119.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = 106.0
+offset_right = 128.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
 action_mode = 0
 texture_normal = ExtResource("3_joh67")
+ignore_texture_size = true
+stretch_mode = 0
 script = ExtResource("4_u184e")
+
+[node name="Label" type="Label" parent="Settings Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Exit Button" type="TextureButton" parent="."]
 self_modulate = Color(1, 0.803922, 0.458824, 1)
-offset_left = 48.0
-offset_top = 123.0
-offset_right = 112.0
-offset_bottom = 139.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = 180.0
+offset_right = 128.0
+offset_bottom = 244.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
 action_mode = 0
 texture_normal = ExtResource("3_joh67")
+ignore_texture_size = true
+stretch_mode = 0
 script = ExtResource("4_u184e")
+
+[node name="Label" type="Label" parent="Exit Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Exit"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="mouse_entered" from="Start Button" to="Start Button" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Start Button" to="Start Button" method="_on_mouse_exited"]

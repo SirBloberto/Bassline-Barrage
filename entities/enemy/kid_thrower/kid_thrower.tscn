@@ -1,7 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://cidmv7oym7bu7"]
+[gd_scene load_steps=5 format=3 uid="uid://cidmv7oym7bu7"]
 
 [ext_resource type="PackedScene" uid="uid://dec8n1lcfldfc" path="res://entities/enemy/enemy.tscn" id="1_pfb2y"]
 [ext_resource type="Script" uid="uid://3vossw7hb884" path="res://entities/enemy/kid_thrower/kid_thrower.gd" id="2_gmrdj"]
+[ext_resource type="Shader" uid="uid://3qtt18cmcq40" path="res://resources/shader/person_customiser.gdshader" id="3_8mhc2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t6jh0"]
+resource_local_to_scene = true
+shader = ExtResource("3_8mhc2")
+shader_parameter/colour_tolerance = 0.01
+shader_parameter/outline_relative_brightness = 0.7
+shader_parameter/skin_colour = Color(0, 0, 0, 1)
+shader_parameter/shirt_colour = Color(0, 0, 0, 1)
+shader_parameter/pants_colour = Color(0, 0, 0, 1)
+shader_parameter/skin_base = Color(0.996, 0.804, 0.455, 1)
+shader_parameter/skin_outline = Color(0.933, 0.486, 0.341, 1)
+shader_parameter/shirt_base = Color(0.655, 0.945, 0.443, 1)
+shader_parameter/shirt_outline = Color(0.224, 0.714, 0.392, 1)
+shader_parameter/pants_base = Color(0.447, 0.937, 0.965, 1)
+shader_parameter/pants_outline = Color(0.231, 0.365, 0.788, 1)
 
 [node name="KidThrower" instance=ExtResource("1_pfb2y")]
 collision_layer = 8
@@ -11,6 +27,9 @@ view_distance = 60.0
 
 [node name="CollisionShape2D" parent="." index="0"]
 position = Vector2(0, 1)
+
+[node name="Sprite" parent="." index="1"]
+material = SubResource("ShaderMaterial_t6jh0")
 
 [node name="Timer" parent="." index="2"]
 wait_time = 3.0

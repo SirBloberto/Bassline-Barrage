@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://cwtm6hl8u7j8f"]
+[gd_scene load_steps=12 format=3 uid="uid://cwtm6hl8u7j8f"]
 
 [ext_resource type="Script" uid="uid://cw5ri075h0pjp" path="res://levels/level.gd" id="1_6267e"]
 [ext_resource type="Texture2D" uid="uid://dllvjvyvo8w5g" path="res://resources/level_art/street_level_10_9.png" id="1_we44c"]
 [ext_resource type="Texture2D" uid="uid://bcp7o6r25pvvi" path="res://resources/tilesets/street_accessories.png" id="3_gfgmc"]
+[ext_resource type="PackedScene" uid="uid://d4jpqoa3dm2bs" path="res://entities/camera/camera.tscn" id="4_ydtxv"]
+[ext_resource type="PackedScene" uid="uid://jixp2yo2h4ng" path="res://entities/player/player.tscn" id="5_23ehr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gfgmc"]
 size = Vector2(344, 14.5)
@@ -24,6 +26,7 @@ radius = 3.0
 height = 12.0
 
 [node name="Street" type="Node2D"]
+scale = Vector2(4, 4)
 script = ExtResource("1_6267e")
 popularity_requirement = 25
 
@@ -233,3 +236,9 @@ region_rect = Rect2(16, 16, 16, 16)
 position = Vector2(55, 104)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_we44c")
+
+[node name="Camera" parent="." instance=ExtResource("4_ydtxv")]
+max_camera = Vector2(304, 176)
+
+[node name="Player" parent="." instance=ExtResource("5_23ehr")]
+position = Vector2(200, 6)
