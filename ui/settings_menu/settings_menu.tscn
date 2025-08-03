@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://cumjitqfsfau0"]
+[gd_scene load_steps=9 format=3 uid="uid://cumjitqfsfau0"]
 
 [ext_resource type="Texture2D" uid="uid://dpc8rm4pqowh3" path="res://resources/ui_components/ui_page_bg.png" id="1_cobfr"]
 [ext_resource type="Script" uid="uid://23o8t4fjwiwo" path="res://ui/settings_menu/settings_menu.gd" id="1_kvsec"]
 [ext_resource type="Texture2D" uid="uid://c8ojf8yscs5xw" path="res://resources/ui_components/back_button.png" id="3_gjkyi"]
 [ext_resource type="Texture2D" uid="uid://4pq51442enft" path="res://resources/ui_components/setting_bar_container.png" id="4_tl6ag"]
-[ext_resource type="Texture2D" uid="uid://dndqmqdcu0d33" path="res://resources/ui_components/settings_up_btn.png" id="5_rnc5y"]
 [ext_resource type="Texture2D" uid="uid://cktffjeewnexn" path="res://resources/ui_components/settings_down_btn_highlight.png" id="6_58eej"]
+[ext_resource type="Script" uid="uid://dgi6lolw2kg32" path="res://ui/hover_button.gd" id="7_rnc5y"]
+[ext_resource type="Texture2D" uid="uid://ct2tjdnu80kwa" path="res://resources/ui_components/settings_up_btn_highlight.png" id="7_tl6ag"]
+[ext_resource type="FontFile" uid="uid://dafxjxaalh14y" path="res://resources/font/Tiny5-Regular.ttf" id="8_rnc5y"]
 
 [node name="SettingsMenu" type="Control"]
 layout_mode = 3
@@ -25,57 +27,114 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_cobfr")
 
-[node name="BackButton" type="Button" parent="."]
-layout_mode = 0
-offset_top = 120.0
-offset_right = 24.0
-offset_bottom = 144.0
-icon = ExtResource("3_gjkyi")
-flat = true
-icon_alignment = 2
-expand_icon = true
-
 [node name="VolumeBar" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 32.0
-offset_top = 52.0
-offset_right = 128.0
-offset_bottom = 92.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = -64.0
+offset_right = 192.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("4_tl6ag")
-
-[node name="IncreaseVolume" type="Button" parent="."]
-layout_mode = 0
-offset_left = 132.0
-offset_top = 60.0
-offset_right = 156.0
-offset_bottom = 84.0
-icon = ExtResource("5_rnc5y")
-flat = true
-
-[node name="DecreaseVolume" type="Button" parent="."]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 61.0
-offset_right = 28.0
-offset_bottom = 85.0
-icon = ExtResource("6_58eej")
-flat = true
 
 [node name="ValueContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 35.0
-offset_top = 58.0
-offset_right = 124.0
-offset_bottom = 86.0
+offset_left = 140.0
+offset_top = 244.0
+offset_right = 497.0
+offset_bottom = 333.0
 
+[node name="BackButton" type="TextureButton" parent="."]
+layout_mode = 1
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 80.0
+offset_bottom = 80.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_gjkyi")
+stretch_mode = 0
+script = ExtResource("7_rnc5y")
+
+[node name="DecreaseVolume" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -272.0
+offset_top = -24.0
+offset_right = -224.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("6_58eej")
+stretch_mode = 0
+script = ExtResource("7_rnc5y")
+
+[node name="IncreaseVolume" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 232.0
+offset_top = -24.0
+offset_right = 280.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("7_tl6ag")
+stretch_mode = 0
+script = ExtResource("7_rnc5y")
+
+[node name="SettingsTitle" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -81.5
+offset_top = 16.0
+offset_right = 81.5
+offset_bottom = 74.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("8_rnc5y")
+theme_override_font_sizes/font_size = 42
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VolumeTitle" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = -110.0
+offset_right = -60.0
+offset_bottom = -69.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("8_rnc5y")
+theme_override_font_sizes/font_size = 36
+text = "Volume"
+
+[connection signal="mouse_entered" from="BackButton" to="BackButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="BackButton" to="BackButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="focus_entered" from="IncreaseVolume" to="." method="_on_increase_volume_focus_entered"]
-[connection signal="focus_exited" from="IncreaseVolume" to="." method="_on_increase_volume_focus_exited"]
-[connection signal="mouse_entered" from="IncreaseVolume" to="." method="_on_increase_volume_mouse_entered"]
-[connection signal="mouse_exited" from="IncreaseVolume" to="." method="_on_increase_volume_mouse_exited"]
-[connection signal="pressed" from="IncreaseVolume" to="." method="_on_increase_volume_pressed"]
-[connection signal="focus_entered" from="DecreaseVolume" to="." method="_on_decrease_volume_focus_entered"]
-[connection signal="focus_exited" from="DecreaseVolume" to="." method="_on_decrease_volume_focus_exited"]
-[connection signal="mouse_entered" from="DecreaseVolume" to="." method="_on_decrease_volume_mouse_entered"]
-[connection signal="mouse_exited" from="DecreaseVolume" to="." method="_on_decrease_volume_mouse_exited"]
+[connection signal="mouse_entered" from="DecreaseVolume" to="DecreaseVolume" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DecreaseVolume" to="DecreaseVolume" method="_on_mouse_exited"]
 [connection signal="pressed" from="DecreaseVolume" to="." method="_on_decrease_volume_pressed"]
+[connection signal="mouse_entered" from="IncreaseVolume" to="IncreaseVolume" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="IncreaseVolume" to="IncreaseVolume" method="_on_mouse_exited"]
+[connection signal="pressed" from="IncreaseVolume" to="." method="_on_increase_volume_pressed"]

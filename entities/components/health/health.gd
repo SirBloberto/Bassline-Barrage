@@ -8,7 +8,6 @@ signal died
 
 @export var health: int:
 	set(value):
-		var difference: int = health - value
 		health = value
 		if health <= 0:
 			died.emit()

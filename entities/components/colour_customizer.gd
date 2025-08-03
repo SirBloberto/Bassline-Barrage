@@ -21,13 +21,29 @@ class_name ColourCustomizer
 	Color("#3B5DC9"),
 	Color("#41A6F6")
 ]
+@export var player_customization: PlayerCustomization:
+	set(value):
+		player_customization = value
+		if player_customization == null:
+			return
+		skin_colour = player_customization.skin_colour
+		shirt_colour = player_customization.shirt_colour
+		pants_colour = player_customization.pants_colour
+		if not is_node_ready():
+			await ready
+		set_material_parameters()
+
+
+var skin_colour: Color = skin_colours.pick_random()
+var shirt_colour: Color = shirt_colours.pick_random()
+var pants_colour: Color = pants_colours.pick_random()
 
 
 func _ready() -> void:
-	var skin_colour: Color = skin_colours.pick_random()
-	var shirt_colour: Color = shirt_colours.pick_random()
-	var pants_colour: Color = pants_colours.pick_random()
-	#Keep picking pant
+	set_material_parameters()
+
+
+func set_material_parameters() -> void:
 	material.set_shader_parameter("skin_colour", skin_colour)
 	material.set_shader_parameter("shirt_colour", shirt_colour)
 	material.set_shader_parameter("pants_colour", pants_colour)

@@ -16,6 +16,14 @@ var last_direction: Vector2 = Vector2.UP
 
 func _ready() -> void:
 	sprite.play()
+	
+	if Global.player_customization == null:
+		Global.player_customization = PlayerCustomization.new()
+		Global.player_customization.skin_colour = sprite.skin_colour
+		Global.player_customization.shirt_colour = sprite.shirt_colour
+		Global.player_customization.pants_colour = sprite.pants_colour
+	else:
+		sprite.player_customization = Global.player_customization
 
 
 func _process(_delta: float) -> void:

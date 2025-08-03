@@ -22,7 +22,7 @@ func _on_timer_timeout() -> void:
 	var random_start = spawns.pick_random()
 	var tween: Tween = get_tree().create_tween()
 	tween.finished.connect(tween_finished)
-	tween.tween_method(func(value): random_particle.global_position = value, random_start.global_position, random_start.global_position - Vector2(0.0, 4.0), 1.5)
+	#tween.tween_method(func(value): random_particle.global_position = value, random_start.global_position, random_start.global_position - Vector2(0.0, 4.0), 1.5)
 
 
 func tween_finished() -> void:
