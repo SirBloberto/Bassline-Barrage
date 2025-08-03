@@ -8,7 +8,7 @@ You can find **Bassline Barrage** on [Itch.io](https://sirbloberto.itch.io/bassl
 ## Controls
 
 - Use **W,A,S,D** to move! 
-- Blast basslines **automatically**!
+- Aim with your **Mouse** and blast some baselines!
 
 ## Time to Perform!
 Rock  your way through 3 levels of musical mayhem to establish yourself as a legend of the bass.
