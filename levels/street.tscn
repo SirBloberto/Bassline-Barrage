@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://cwtm6hl8u7j8f"]
+[gd_scene load_steps=13 format=3 uid="uid://cwtm6hl8u7j8f"]
 
 [ext_resource type="Script" uid="uid://cw5ri075h0pjp" path="res://levels/level.gd" id="1_6267e"]
 [ext_resource type="Texture2D" uid="uid://dllvjvyvo8w5g" path="res://resources/level_art/street_level_10_9.png" id="1_we44c"]
 [ext_resource type="Texture2D" uid="uid://bcp7o6r25pvvi" path="res://resources/tilesets/street_accessories.png" id="3_gfgmc"]
 [ext_resource type="PackedScene" uid="uid://d4jpqoa3dm2bs" path="res://entities/camera/camera.tscn" id="4_ydtxv"]
 [ext_resource type="PackedScene" uid="uid://jixp2yo2h4ng" path="res://entities/player/player.tscn" id="5_23ehr"]
+[ext_resource type="PackedScene" uid="uid://cidmv7oym7bu7" path="res://entities/enemy/kid_thrower/kid_thrower.tscn" id="6_8guf7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gfgmc"]
 size = Vector2(344, 14.5)
@@ -29,7 +30,8 @@ height = 12.0
 y_sort_enabled = true
 scale = Vector2(4, 4)
 script = ExtResource("1_6267e")
-popularity_requirement = 25
+popularity_requirement = 12
+new_scene = "res://levels/stage.tscn"
 
 [node name="Street" type="Sprite2D" parent="."]
 y_sort_enabled = true
@@ -302,3 +304,73 @@ max_camera = Vector2(304, 176)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(200, 6)
+
+[node name="DiskSpawn" type="Node2D" parent="."]
+position = Vector2(201.5, 29.75)
+
+[node name="Thrower" type="Node2D" parent="."]
+
+[node name="KidThrower" parent="Thrower" node_paths=PackedStringArray("player") instance=ExtResource("6_8guf7")]
+z_index = 1
+position = Vector2(42.5, 34.5)
+player = NodePath("../../Player")
+
+[node name="KidThrower2" parent="Thrower" node_paths=PackedStringArray("player") instance=ExtResource("6_8guf7")]
+z_index = 1
+position = Vector2(122.25, 50.5)
+player = NodePath("../../Player")
+
+[node name="KidThrower3" parent="Thrower" node_paths=PackedStringArray("player") instance=ExtResource("6_8guf7")]
+z_index = 1
+position = Vector2(55.75, 133.75)
+player = NodePath("../../Player")
+
+[node name="KidThrower4" parent="Thrower" node_paths=PackedStringArray("player") instance=ExtResource("6_8guf7")]
+z_index = 1
+position = Vector2(250.5, 151.5)
+player = NodePath("../../Player")
+
+[node name="KidThrower5" parent="Thrower" node_paths=PackedStringArray("player") instance=ExtResource("6_8guf7")]
+z_index = 1
+position = Vector2(296, 84.25)
+player = NodePath("../../Player")
+
+[node name="KidThrower6" parent="Thrower" node_paths=PackedStringArray("player") instance=ExtResource("6_8guf7")]
+z_index = 1
+position = Vector2(196.25, 103.75)
+player = NodePath("../../Player")
+
+[node name="KidThrower7" parent="Thrower" node_paths=PackedStringArray("player") instance=ExtResource("6_8guf7")]
+z_index = 1
+position = Vector2(246.25, 66)
+player = NodePath("../../Player")
+
+[node name="KidThrower8" parent="Thrower" node_paths=PackedStringArray("player") instance=ExtResource("6_8guf7")]
+z_index = 1
+position = Vector2(129.75, 103.75)
+player = NodePath("../../Player")
+
+[node name="KidThrower9" parent="Thrower" node_paths=PackedStringArray("player") instance=ExtResource("6_8guf7")]
+z_index = 1
+position = Vector2(97.5, 166.25)
+player = NodePath("../../Player")
+
+[node name="KidThrower10" parent="Thrower" node_paths=PackedStringArray("player") instance=ExtResource("6_8guf7")]
+z_index = 1
+position = Vector2(10.25, 106.5)
+player = NodePath("../../Player")
+
+[node name="KidThrower11" parent="Thrower" node_paths=PackedStringArray("player") instance=ExtResource("6_8guf7")]
+z_index = 1
+position = Vector2(73.5, 74.25)
+player = NodePath("../../Player")
+
+[node name="KidThrower12" parent="Thrower" node_paths=PackedStringArray("player") instance=ExtResource("6_8guf7")]
+z_index = 1
+position = Vector2(172.75, 69.75)
+player = NodePath("../../Player")
+
+[node name="KidThrower13" parent="Thrower" node_paths=PackedStringArray("player") instance=ExtResource("6_8guf7")]
+z_index = 1
+position = Vector2(172.75, 69.75)
+player = NodePath("../../Player")

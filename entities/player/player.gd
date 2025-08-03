@@ -11,6 +11,9 @@ const PROJECTILE: PackedScene = preload("res://entities/projectile/projectile.ts
 @onready var sprite: AnimatedSprite2D = $Sprite
 @onready var hud: PlayerHUD = $PlayerHud
 @onready var progress_bar: ProgressBar = $PlayerHud/ProgressBar
+@onready var track1: TextureRect = $PlayerHud/UI/Track1
+@onready var track2: TextureRect = $PlayerHud/UI/Track2
+@onready var track3: TextureRect = $PlayerHud/UI/Track3
 
 var input: Vector2 = Vector2.ZERO
 var last_direction: Vector2 = Vector2.UP

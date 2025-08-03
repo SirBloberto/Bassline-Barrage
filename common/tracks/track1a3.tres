@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Track" load_steps=5 format=3 uid="uid://dg1if6uelja6p"]
+
+[ext_resource type="Script" uid="uid://djg1kfh0nkeg5" path="res://common/track.gd" id="1_t6q0d"]
+[ext_resource type="Texture2D" uid="uid://cul21ptpkppsb" path="res://resources/sprites/record_3.png" id="1_tpu3r"]
+[ext_resource type="AudioStream" uid="uid://bwilf6li4nh5k" path="res://resources/audio/track1/a/3.ogg" id="3_v2oci"]
+[ext_resource type="AudioStream" uid="uid://djv4fbfx7ar2o" path="res://resources/audio/track1/a/g3.ogg" id="4_b2he8"]
+
+[resource]
+script = ExtResource("1_t6q0d")
+icon = ExtResource("1_tpu3r")
+tracks = Array[AudioStream]([ExtResource("3_v2oci"), ExtResource("4_b2he8")])
+metadata/_custom_type_script = "uid://djg1kfh0nkeg5"

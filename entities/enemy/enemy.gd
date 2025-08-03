@@ -1,4 +1,4 @@
-extends Node2D
+extends CharacterBody2D
 class_name Enemy
 
 
@@ -41,3 +41,5 @@ func _on_health_died() -> void:
 	Global.player.progress_bar.value += 1
 	collision_shape.set_deferred("disabled", true)
 	convert_effect.play()
+	sprite.material.set_shader_parameter("outline_colour", Vector4(0.0, 0.0, 0.0, 0.0))
+	sprite.animation = "idle_down"

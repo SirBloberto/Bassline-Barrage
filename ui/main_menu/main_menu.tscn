@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cs06phbh864nt" path="res://resources/ui_components/menu_button.png" id="3_joh67"]
 [ext_resource type="Script" uid="uid://dgi6lolw2kg32" path="res://ui/hover_button.gd" id="4_u184e"]
 [ext_resource type="FontFile" uid="uid://dafxjxaalh14y" path="res://resources/font/Tiny5-Regular.ttf" id="6_6mijq"]
-[ext_resource type="AudioStream" uid="uid://m651cc6hqoag" path="res://resources/audio/track2/backing.ogg" id="6_joh67"]
+[ext_resource type="AudioStream" uid="uid://cya7y50xea1ib" path="res://resources/audio/title.ogg" id="6_u184e"]
 [ext_resource type="PackedScene" uid="uid://cumjitqfsfau0" path="res://ui/settings_menu/settings_menu.tscn" id="7_u184e"]
 
 [node name="MainMenu" type="Control"]
@@ -163,7 +163,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_joh67")
+stream = ExtResource("6_u184e")
 autoplay = true
 
 [node name="SettingsMenu" parent="." instance=ExtResource("7_u184e")]

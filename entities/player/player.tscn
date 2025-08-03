@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://jixp2yo2h4ng"]
+[gd_scene load_steps=32 format=3 uid="uid://jixp2yo2h4ng"]
 
 [ext_resource type="Script" uid="uid://eqncict3w17y" path="res://entities/player/player.gd" id="1_symyc"]
 [ext_resource type="Shader" uid="uid://3qtt18cmcq40" path="res://resources/shader/person_customiser.gdshader" id="2_fkugw"]
@@ -7,10 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://bgqr6p7c1jvwm" path="res://resources/sprites/fancy_player_sprites.png" id="4_qiwj3"]
 [ext_resource type="Script" uid="uid://cvo6uunuvk3r7" path="res://entities/player/player_hud.gd" id="7_26q78"]
 [ext_resource type="Texture2D" uid="uid://00v7k67xpusu" path="res://resources/ui_components/HUD.png" id="7_qiwj3"]
+[ext_resource type="Texture2D" uid="uid://c58browac7wim" path="res://resources/ui_components/victory_text.png" id="8_j3ovn"]
 [ext_resource type="Script" uid="uid://dgi6lolw2kg32" path="res://ui/hover_button.gd" id="9_bectd"]
 [ext_resource type="Texture2D" uid="uid://cs06phbh864nt" path="res://resources/ui_components/menu_button.png" id="9_wvtmh"]
 [ext_resource type="FontFile" uid="uid://dafxjxaalh14y" path="res://resources/font/Tiny5-Regular.ttf" id="10_7thud"]
 [ext_resource type="PackedScene" uid="uid://cumjitqfsfau0" path="res://ui/settings_menu/settings_menu.tscn" id="11_7thud"]
+[ext_resource type="Script" uid="uid://cngn1r7jvvkx6" path="res://entities/player/player_health.gd" id="12_a1qjk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fkugw"]
 radius = 3.0
@@ -20,6 +22,7 @@ shader = ExtResource("2_fkugw")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -186,6 +189,7 @@ health = 10
 metadata/_custom_type_script = "uid://d3xlrnop14c6w"
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
 autostart = true
 
 [node name="PlayerHud" type="CanvasLayer" parent="."]
@@ -199,6 +203,27 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("7_qiwj3")
 
+[node name="Track1" type="TextureRect" parent="PlayerHud/UI"]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 540.0
+offset_right = 296.0
+offset_bottom = 572.0
+
+[node name="Track2" type="TextureRect" parent="PlayerHud/UI"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 540.0
+offset_right = 336.0
+offset_bottom = 572.0
+
+[node name="Track3" type="TextureRect" parent="PlayerHud/UI"]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 540.0
+offset_right = 376.0
+offset_bottom = 572.0
+
 [node name="Victory" type="Control" parent="PlayerHud"]
 process_mode = 3
 visible = false
@@ -209,22 +234,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VictoryTitle" type="Label" parent="PlayerHud/Victory"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -23.0
-offset_top = -88.0
-offset_right = 31.0
-offset_bottom = -65.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 48
-text = "Victory"
+[node name="VictorySplash" type="TextureRect" parent="PlayerHud/Victory"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 48.0
+offset_right = 377.0
+offset_bottom = 349.0
+texture = ExtResource("8_j3ovn")
 
 [node name="Info" type="Label" parent="PlayerHud/Victory"]
 layout_mode = 1
@@ -233,10 +249,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -47.0
-offset_top = -19.0
-offset_right = 50.0
-offset_bottom = 4.0
+offset_left = -283.0
+offset_top = -134.0
+offset_right = -186.0
+offset_bottom = -111.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -250,10 +266,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -64.0
-offset_top = 19.0
-offset_right = 64.0
-offset_bottom = 83.0
+offset_left = -297.0
+offset_top = -104.0
+offset_right = -169.0
+offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("9_wvtmh")
@@ -359,6 +375,14 @@ offset_right = 631.0
 offset_bottom = 29.0
 theme_override_styles/fill = SubResource("StyleBoxFlat_bectd")
 show_percentage = false
+
+[node name="Health" type="HBoxContainer" parent="PlayerHud"]
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 268.0
+offset_bottom = 36.0
+theme_override_constants/separation = 5
+script = ExtResource("12_a1qjk")
 
 [node name="Pause" type="Control" parent="PlayerHud"]
 process_mode = 3
@@ -480,6 +504,7 @@ process_mode = 3
 visible = false
 
 [connection signal="damaged" from="Health" to="." method="_on_health_damaged"]
+[connection signal="damaged" from="Health" to="PlayerHud/Health" method="_on_health_damaged"]
 [connection signal="died" from="Health" to="PlayerHud" method="_on_health_died"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="mouse_entered" from="PlayerHud/Victory/Menu" to="PlayerHud/Victory/Menu" method="_on_mouse_entered"]

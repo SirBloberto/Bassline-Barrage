@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=3 uid="uid://crm1tmgeqy0qb"]
+[gd_scene load_steps=90 format=3 uid="uid://crm1tmgeqy0qb"]
 
 [ext_resource type="Script" uid="uid://cw5ri075h0pjp" path="res://levels/level.gd" id="1_eh5c0"]
 [ext_resource type="Texture2D" uid="uid://cmqqbd5t7w8q3" path="res://resources/level_art/boss_stadium.png" id="2_5nql0"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://bpu0klte57pn4" path="res://levels/stage_light.gd" id="5_t4ets"]
 [ext_resource type="PackedScene" uid="uid://d4jpqoa3dm2bs" path="res://entities/camera/camera.tscn" id="6_gquxb"]
 [ext_resource type="PackedScene" uid="uid://jixp2yo2h4ng" path="res://entities/player/player.tscn" id="7_o6c7o"]
+[ext_resource type="Texture2D" uid="uid://7r6i385sxgiy" path="res://resources/tilesets/stage_assets.png" id="8_o6c7o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5nql0"]
 size = Vector2(72, 15)
@@ -29,44 +30,13 @@ size = Vector2(20, 282)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o6c7o"]
 size = Vector2(361, 25.75)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_t4ets"]
-resource_local_to_scene = true
-shader = ExtResource("4_ohkdy")
-shader_parameter/colour_tolerance = 0.01
-shader_parameter/outline_relative_brightness = 0.7
-shader_parameter/white_amount = 0.0
-shader_parameter/skin_colour = Color(0, 0, 0, 1)
-shader_parameter/shirt_colour = Color(0, 0, 0, 1)
-shader_parameter/pants_colour = Color(0, 0, 0, 1)
-shader_parameter/skin_base = Color(0.996, 0.804, 0.455, 1)
-shader_parameter/skin_outline = Color(0.933, 0.486, 0.341, 1)
-shader_parameter/shirt_base = Color(0.655, 0.945, 0.443, 1)
-shader_parameter/shirt_outline = Color(0.224, 0.714, 0.392, 1)
-shader_parameter/pants_base = Color(0.447, 0.937, 0.965, 1)
-shader_parameter/pants_outline = Color(0.231, 0.365, 0.788, 1)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7x6kn"]
-resource_local_to_scene = true
-shader = ExtResource("4_ohkdy")
-shader_parameter/colour_tolerance = 0.01
-shader_parameter/outline_relative_brightness = 0.7
-shader_parameter/white_amount = 0.0
-shader_parameter/skin_colour = Color(0, 0, 0, 1)
-shader_parameter/shirt_colour = Color(0, 0, 0, 1)
-shader_parameter/pants_colour = Color(0, 0, 0, 1)
-shader_parameter/skin_base = Color(0.996, 0.804, 0.455, 1)
-shader_parameter/skin_outline = Color(0.933, 0.486, 0.341, 1)
-shader_parameter/shirt_base = Color(0.655, 0.945, 0.443, 1)
-shader_parameter/shirt_outline = Color(0.224, 0.714, 0.392, 1)
-shader_parameter/pants_base = Color(0.447, 0.937, 0.965, 1)
-shader_parameter/pants_outline = Color(0.231, 0.365, 0.788, 1)
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gquxb"]
 resource_local_to_scene = true
 shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -83,6 +53,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -99,6 +70,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -115,6 +87,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -131,6 +104,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -147,6 +121,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -163,6 +138,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -179,6 +155,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -195,6 +172,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -211,6 +189,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -227,6 +206,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -243,6 +223,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -259,6 +240,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -275,6 +257,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -291,6 +274,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -307,6 +291,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -323,6 +308,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -339,6 +325,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -355,6 +342,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -371,6 +359,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -387,6 +376,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -403,6 +393,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -419,6 +410,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -435,6 +427,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -451,6 +444,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -467,6 +461,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -483,6 +478,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -499,6 +495,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -515,6 +512,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -531,6 +529,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -547,6 +546,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -563,6 +563,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -579,6 +580,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -595,6 +597,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -611,6 +614,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -627,6 +631,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -643,6 +648,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -659,6 +665,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -675,6 +682,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -691,6 +699,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -707,6 +716,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -723,6 +733,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -739,6 +750,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -755,6 +767,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -771,6 +784,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -787,6 +801,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -803,6 +818,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -819,6 +835,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -835,6 +852,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -851,6 +869,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -867,6 +886,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -883,6 +903,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -899,6 +920,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -915,6 +937,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -931,6 +954,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -947,6 +971,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -963,6 +988,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -979,6 +1005,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -995,6 +1022,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -1011,6 +1039,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -1027,6 +1056,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -1043,6 +1073,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -1059,6 +1090,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -1075,6 +1107,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -1091,6 +1124,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -1107,6 +1141,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -1123,6 +1158,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -1139,6 +1175,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -1155,6 +1192,7 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -1171,6 +1209,41 @@ shader = ExtResource("4_ohkdy")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
 shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
+shader_parameter/skin_colour = Color(0, 0, 0, 1)
+shader_parameter/shirt_colour = Color(0, 0, 0, 1)
+shader_parameter/pants_colour = Color(0, 0, 0, 1)
+shader_parameter/skin_base = Color(0.996, 0.804, 0.455, 1)
+shader_parameter/skin_outline = Color(0.933, 0.486, 0.341, 1)
+shader_parameter/shirt_base = Color(0.655, 0.945, 0.443, 1)
+shader_parameter/shirt_outline = Color(0.224, 0.714, 0.392, 1)
+shader_parameter/pants_base = Color(0.447, 0.937, 0.965, 1)
+shader_parameter/pants_outline = Color(0.231, 0.365, 0.788, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8uaid"]
+resource_local_to_scene = true
+shader = ExtResource("4_ohkdy")
+shader_parameter/colour_tolerance = 0.01
+shader_parameter/outline_relative_brightness = 0.7
+shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
+shader_parameter/skin_colour = Color(0, 0, 0, 1)
+shader_parameter/shirt_colour = Color(0, 0, 0, 1)
+shader_parameter/pants_colour = Color(0, 0, 0, 1)
+shader_parameter/skin_base = Color(0.996, 0.804, 0.455, 1)
+shader_parameter/skin_outline = Color(0.933, 0.486, 0.341, 1)
+shader_parameter/shirt_base = Color(0.655, 0.945, 0.443, 1)
+shader_parameter/shirt_outline = Color(0.224, 0.714, 0.392, 1)
+shader_parameter/pants_base = Color(0.447, 0.937, 0.965, 1)
+shader_parameter/pants_outline = Color(0.231, 0.365, 0.788, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u6bxd"]
+resource_local_to_scene = true
+shader = ExtResource("4_ohkdy")
+shader_parameter/colour_tolerance = 0.01
+shader_parameter/outline_relative_brightness = 0.7
+shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 1, 1, 0)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -1264,387 +1337,387 @@ shape = SubResource("RectangleShape2D_o6c7o")
 [node name="ConcertPeople" type="Node2D" parent="."]
 
 [node name="ConcertAttendee" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
-material = SubResource("ShaderMaterial_t4ets")
+material = SubResource("ShaderMaterial_gquxb")
 position = Vector2(54, 161)
 
 [node name="ConcertAttendee8" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
-material = SubResource("ShaderMaterial_7x6kn")
+material = SubResource("ShaderMaterial_o6c7o")
 position = Vector2(36, 162)
 
 [node name="ConcertAttendee9" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = 1
-material = SubResource("ShaderMaterial_gquxb")
+material = SubResource("ShaderMaterial_ebbdf")
 position = Vector2(26, 170)
 
 [node name="ConcertAttendee10" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
-material = SubResource("ShaderMaterial_o6c7o")
+material = SubResource("ShaderMaterial_3trba")
 position = Vector2(22, 161)
 
 [node name="ConcertAttendee11" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = 3
-material = SubResource("ShaderMaterial_ebbdf")
+material = SubResource("ShaderMaterial_7hcef")
 position = Vector2(16, 174)
 
 [node name="ConcertAttendee12" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = 1
-material = SubResource("ShaderMaterial_3trba")
+material = SubResource("ShaderMaterial_8bldl")
 position = Vector2(10, 158)
 
 [node name="ConcertAttendee13" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = 2
-material = SubResource("ShaderMaterial_7hcef")
+material = SubResource("ShaderMaterial_1vsv6")
 position = Vector2(4, 168)
 
 [node name="ConcertAttendee15" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
-material = SubResource("ShaderMaterial_8bldl")
+material = SubResource("ShaderMaterial_x53sw")
 position = Vector2(1, 156)
 
 [node name="ConcertAttendee2" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = 1
-material = SubResource("ShaderMaterial_1vsv6")
+material = SubResource("ShaderMaterial_jcphq")
 position = Vector2(40, 172)
 
 [node name="ConcertAttendee3" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = 2
-material = SubResource("ShaderMaterial_x53sw")
+material = SubResource("ShaderMaterial_b6dtp")
 position = Vector2(88, 171)
 
 [node name="ConcertAttendee14" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = 2
-material = SubResource("ShaderMaterial_jcphq")
+material = SubResource("ShaderMaterial_3rsaa")
 position = Vector2(56, 173)
 
 [node name="ConcertAttendee16" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = 2
-material = SubResource("ShaderMaterial_b6dtp")
+material = SubResource("ShaderMaterial_gff88")
 position = Vector2(74, 173)
 
 [node name="ConcertAttendee17" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
-material = SubResource("ShaderMaterial_3rsaa")
+material = SubResource("ShaderMaterial_aou2g")
 position = Vector2(98, 167)
 
 [node name="ConcertAttendee18" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = 1
-material = SubResource("ShaderMaterial_gff88")
+material = SubResource("ShaderMaterial_4se8i")
 position = Vector2(108, 175)
 
 [node name="ConcertAttendee19" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
-material = SubResource("ShaderMaterial_aou2g")
+material = SubResource("ShaderMaterial_5o3am")
 position = Vector2(118, 170)
 
 [node name="ConcertAttendee20" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = 1
-material = SubResource("ShaderMaterial_4se8i")
+material = SubResource("ShaderMaterial_j6jrs")
 position = Vector2(126, 176)
 
 [node name="ConcertAttendee21" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
-material = SubResource("ShaderMaterial_5o3am")
+material = SubResource("ShaderMaterial_wl4d8")
 position = Vector2(136, 170)
 
 [node name="ConcertAttendee22" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = 1
-material = SubResource("ShaderMaterial_j6jrs")
+material = SubResource("ShaderMaterial_55p0m")
 position = Vector2(144, 176)
 
 [node name="ConcertAttendee23" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
-material = SubResource("ShaderMaterial_wl4d8")
+material = SubResource("ShaderMaterial_gqil8")
 position = Vector2(153, 171)
 
 [node name="ConcertAttendee24" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = 1
-material = SubResource("ShaderMaterial_55p0m")
+material = SubResource("ShaderMaterial_4exr2")
 position = Vector2(162, 176)
 
 [node name="ConcertAttendee25" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
-material = SubResource("ShaderMaterial_gqil8")
+material = SubResource("ShaderMaterial_71ymb")
 position = Vector2(172, 171)
 
 [node name="ConcertAttendee26" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = 1
-material = SubResource("ShaderMaterial_4exr2")
+material = SubResource("ShaderMaterial_dfegf")
 position = Vector2(182, 176)
 
 [node name="ConcertAttendee27" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
-material = SubResource("ShaderMaterial_71ymb")
+material = SubResource("ShaderMaterial_jv6np")
 position = Vector2(190, 170)
 
 [node name="ConcertAttendee28" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
-material = SubResource("ShaderMaterial_dfegf")
+material = SubResource("ShaderMaterial_uwg2b")
 position = Vector2(201, 168)
 
 [node name="ConcertAttendee29" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
-material = SubResource("ShaderMaterial_jv6np")
+material = SubResource("ShaderMaterial_fywny")
 position = Vector2(197, 178)
 
 [node name="ConcertAttendee30" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = 1
-material = SubResource("ShaderMaterial_uwg2b")
+material = SubResource("ShaderMaterial_vgdbp")
 position = Vector2(212, 174)
 
 [node name="ConcertAttendee31" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
-material = SubResource("ShaderMaterial_fywny")
+material = SubResource("ShaderMaterial_bxq86")
 position = Vector2(220, 165)
 
 [node name="ConcertAttendee32" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = 1
-material = SubResource("ShaderMaterial_vgdbp")
+material = SubResource("ShaderMaterial_d5r1n")
 position = Vector2(230, 174)
 
 [node name="ConcertAttendee33" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
-material = SubResource("ShaderMaterial_bxq86")
+material = SubResource("ShaderMaterial_c0buj")
 position = Vector2(237, 163)
 
 [node name="ConcertAttendee34" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = 3
-material = SubResource("ShaderMaterial_d5r1n")
+material = SubResource("ShaderMaterial_ottmr")
 position = Vector2(252, 172)
 
 [node name="ConcertAttendee35" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
-material = SubResource("ShaderMaterial_c0buj")
+material = SubResource("ShaderMaterial_72lbb")
 position = Vector2(254, 160)
 
 [node name="ConcertAttendee36" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = 3
-material = SubResource("ShaderMaterial_ottmr")
+material = SubResource("ShaderMaterial_24t3t")
 position = Vector2(264, 176)
 
 [node name="ConcertAttendee37" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
-material = SubResource("ShaderMaterial_72lbb")
+material = SubResource("ShaderMaterial_1e8vn")
 position = Vector2(273, 157)
 
 [node name="ConcertAttendee38" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = 4
-material = SubResource("ShaderMaterial_24t3t")
+material = SubResource("ShaderMaterial_3uarr")
 position = Vector2(274, 170)
 
 [node name="ConcertAttendee39" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
-material = SubResource("ShaderMaterial_1e8vn")
+material = SubResource("ShaderMaterial_aq36r")
 position = Vector2(263, 162)
 
 [node name="ConcertAttendee40" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = 2
-material = SubResource("ShaderMaterial_3uarr")
+material = SubResource("ShaderMaterial_j7mx0")
 position = Vector2(239, 171)
 
 [node name="ConcertAttendee41" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = 2
-material = SubResource("ShaderMaterial_aq36r")
+material = SubResource("ShaderMaterial_2noiq")
 position = Vector2(282, 165)
 
 [node name="ConcertAttendee42" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = 3
-material = SubResource("ShaderMaterial_j7mx0")
+material = SubResource("ShaderMaterial_22eqk")
 position = Vector2(287, 173)
 
 [node name="ConcertAttendee43" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
-material = SubResource("ShaderMaterial_2noiq")
+material = SubResource("ShaderMaterial_t0i33")
 position = Vector2(284, 155)
 
 [node name="ConcertAttendee57" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -1
-material = SubResource("ShaderMaterial_22eqk")
+material = SubResource("ShaderMaterial_8a4ct")
 position = Vector2(277, 145)
 flip_h = true
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee58" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -2
-material = SubResource("ShaderMaterial_t0i33")
+material = SubResource("ShaderMaterial_h1n41")
 position = Vector2(285, 142)
 flip_h = true
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee59" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -3
-material = SubResource("ShaderMaterial_8a4ct")
+material = SubResource("ShaderMaterial_57whq")
 position = Vector2(278, 135)
 flip_h = true
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee60" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -4
-material = SubResource("ShaderMaterial_h1n41")
+material = SubResource("ShaderMaterial_y7fx1")
 position = Vector2(290, 131)
 flip_h = true
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee61" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -5
-material = SubResource("ShaderMaterial_57whq")
+material = SubResource("ShaderMaterial_1n757")
 position = Vector2(283, 126)
 flip_h = true
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee62" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -6
-material = SubResource("ShaderMaterial_y7fx1")
+material = SubResource("ShaderMaterial_cneeq")
 position = Vector2(278, 123)
 flip_h = true
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee63" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -7
-material = SubResource("ShaderMaterial_1n757")
+material = SubResource("ShaderMaterial_36rxj")
 position = Vector2(288, 118)
 flip_h = true
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee64" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -8
-material = SubResource("ShaderMaterial_cneeq")
+material = SubResource("ShaderMaterial_e1wja")
 position = Vector2(280, 115)
 flip_h = true
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee65" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -9
-material = SubResource("ShaderMaterial_36rxj")
+material = SubResource("ShaderMaterial_8c5bh")
 position = Vector2(276, 107)
 flip_h = true
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee66" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -10
-material = SubResource("ShaderMaterial_e1wja")
+material = SubResource("ShaderMaterial_2ynbn")
 position = Vector2(284, 105)
 flip_h = true
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee67" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -11
-material = SubResource("ShaderMaterial_8c5bh")
+material = SubResource("ShaderMaterial_djyk5")
 position = Vector2(290, 98)
 flip_h = true
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee68" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -12
-material = SubResource("ShaderMaterial_2ynbn")
+material = SubResource("ShaderMaterial_rvgw8")
 position = Vector2(281, 96)
 flip_h = true
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee69" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -13
-material = SubResource("ShaderMaterial_djyk5")
+material = SubResource("ShaderMaterial_fppqs")
 position = Vector2(273, 93)
 flip_h = true
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee70" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -15
-material = SubResource("ShaderMaterial_rvgw8")
+material = SubResource("ShaderMaterial_i2h4a")
 position = Vector2(270, 82)
 flip_h = true
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee71" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -14
-material = SubResource("ShaderMaterial_fppqs")
+material = SubResource("ShaderMaterial_2fdw3")
 position = Vector2(280, 85)
 flip_h = true
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee72" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -13
-material = SubResource("ShaderMaterial_i2h4a")
+material = SubResource("ShaderMaterial_adbb5")
 position = Vector2(289, 90)
 flip_h = true
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee4" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = 1
-material = SubResource("ShaderMaterial_2fdw3")
+material = SubResource("ShaderMaterial_cvmyx")
 position = Vector2(79, 167)
 
 [node name="ConcertAttendee5" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
-material = SubResource("ShaderMaterial_adbb5")
+material = SubResource("ShaderMaterial_67mi3")
 position = Vector2(70, 163)
 
 [node name="ConcertAttendee6" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
-material = SubResource("ShaderMaterial_cvmyx")
+material = SubResource("ShaderMaterial_evhoq")
 position = Vector2(48, 167)
 
 [node name="ConcertAttendee7" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = 1
-material = SubResource("ShaderMaterial_67mi3")
+material = SubResource("ShaderMaterial_4gove")
 position = Vector2(63, 167)
 
 [node name="ConcertAttendee44" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -1
-material = SubResource("ShaderMaterial_evhoq")
+material = SubResource("ShaderMaterial_kwagl")
 position = Vector2(12, 147)
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee45" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -2
-material = SubResource("ShaderMaterial_4gove")
+material = SubResource("ShaderMaterial_nwsme")
 position = Vector2(4, 140)
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee46" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -3
-material = SubResource("ShaderMaterial_kwagl")
+material = SubResource("ShaderMaterial_dx5im")
 position = Vector2(11, 132)
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee47" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -4
-material = SubResource("ShaderMaterial_nwsme")
+material = SubResource("ShaderMaterial_vneak")
 position = Vector2(1, 127)
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee48" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -5
-material = SubResource("ShaderMaterial_dx5im")
+material = SubResource("ShaderMaterial_ymynu")
 position = Vector2(10, 121)
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee49" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -6
-material = SubResource("ShaderMaterial_vneak")
+material = SubResource("ShaderMaterial_rmuet")
 position = Vector2(-1, 114)
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee50" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -7
-material = SubResource("ShaderMaterial_ymynu")
+material = SubResource("ShaderMaterial_g853q")
 position = Vector2(11, 108)
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee51" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -8
-material = SubResource("ShaderMaterial_rmuet")
+material = SubResource("ShaderMaterial_jht5q")
 position = Vector2(-3, 103)
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee52" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -9
-material = SubResource("ShaderMaterial_g853q")
+material = SubResource("ShaderMaterial_xmmkm")
 position = Vector2(6, 100)
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee53" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -10
-material = SubResource("ShaderMaterial_jht5q")
+material = SubResource("ShaderMaterial_ckpvk")
 position = Vector2(1, 88)
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee54" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -12
-material = SubResource("ShaderMaterial_xmmkm")
+material = SubResource("ShaderMaterial_3wt8f")
 position = Vector2(11, 81)
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee55" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -11
-material = SubResource("ShaderMaterial_ckpvk")
+material = SubResource("ShaderMaterial_8uaid")
 position = Vector2(18, 84)
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="ConcertAttendee56" parent="ConcertPeople" instance=ExtResource("3_nnuvh")]
 z_index = -10
-material = SubResource("ShaderMaterial_3wt8f")
+material = SubResource("ShaderMaterial_u6bxd")
 position = Vector2(13, 95)
 region_rect = Rect2(0, 16, 16, 16)
 
@@ -1670,3 +1743,10 @@ max_camera = Vector2(288, 176)
 
 [node name="Player" parent="." instance=ExtResource("7_o6c7o")]
 position = Vector2(43.75, 56.5)
+
+[node name="DiskSpawn" type="Node2D" parent="."]
+position = Vector2(78, 60)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(113.5, 57.5)
+texture = ExtResource("8_o6c7o")

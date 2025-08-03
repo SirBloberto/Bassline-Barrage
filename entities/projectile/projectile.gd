@@ -5,12 +5,14 @@ class_name Projectile
 var direction: Vector2
 var friendly: bool = false
 var damage: int = 1
-var speed: float
+var speed: float = 400.0
 
 
 const WALL_LAYER: int = 1
 const FRIENDLY_LAYER: int = 2
 const ENEMY_LAYER: int = 4
+
+@onready var sprite: Sprite2D = $Sprite2D
 
 
 func _ready() -> void:
@@ -30,4 +32,4 @@ func _on_body_entered(body: Node) -> void:
 
 
 func _physics_process(delta: float) -> void:
-	position += direction * delta * 400.0
+	position += direction * delta * speed

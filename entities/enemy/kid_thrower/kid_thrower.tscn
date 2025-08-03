@@ -9,6 +9,8 @@ resource_local_to_scene = true
 shader = ExtResource("3_8mhc2")
 shader_parameter/colour_tolerance = 0.01
 shader_parameter/outline_relative_brightness = 0.7
+shader_parameter/white_amount = 0.0
+shader_parameter/outline_colour = Color(1, 0.243, 0.325, 1)
 shader_parameter/skin_colour = Color(0, 0, 0, 1)
 shader_parameter/shirt_colour = Color(0, 0, 0, 1)
 shader_parameter/pants_colour = Color(0, 0, 0, 1)
@@ -32,7 +34,7 @@ position = Vector2(0, 1)
 material = SubResource("ShaderMaterial_t6jh0")
 
 [node name="Timer" parent="." index="2"]
-wait_time = 3.0
+wait_time = 1.5
 one_shot = true
 
 [node name="Health" parent="." index="3"]

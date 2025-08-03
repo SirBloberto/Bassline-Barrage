@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7v6pn6ldhnmo"]
+
+[ext_resource type="Texture2D" uid="uid://c3uu7oeq6mh5s" path="res://resources/sprites/heart.png" id="1_mg5n3"]
+
+[node name="PlayerHealth" type="TextureRect"]
+custom_minimum_size = Vector2(24, 24)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_mg5n3")
+expand_mode = 1
