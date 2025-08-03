@@ -9,7 +9,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18giq"]
 resource_local_to_scene = true
-size = Vector2(32, 9)
+size = Vector2(16, 9)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q7mmc"]
 resource_local_to_scene = true
@@ -128,23 +128,39 @@ region_enabled = true
 region_rect = Rect2(16, 48, 32, 16)
 
 [node name="Sprite2D7" type="Sprite2D" parent="Background"]
-z_index = 1
+z_index = 2
 y_sort_enabled = true
 position = Vector2(-65, -46)
 texture = ExtResource("3_wvp5p")
 region_enabled = true
 region_rect = Rect2(0, 16, 16, 16)
 
+[node name="Sprite2D8" type="Sprite2D" parent="Background"]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(24, 0)
+texture = ExtResource("3_wvp5p")
+region_enabled = true
+region_rect = Rect2(16, 48, 32, 16)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Background"]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(-64, -32)
+texture = ExtResource("3_wvp5p")
+region_enabled = true
+region_rect = Rect2(16, 48, 16.2538, 15.7952)
+
 [node name="Player" parent="." instance=ExtResource("2_q7mmc")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(24, 45)
+position = Vector2(23.5, 45.25)
 
 [node name="Kids" type="Node2D" parent="."]
 y_sort_enabled = true
 
 [node name="KidThrower" parent="Kids" node_paths=PackedStringArray("player") instance=ExtResource("3_c6dbt")]
-z_index = 2
+z_index = 1
 y_sort_enabled = true
 position = Vector2(168, 122)
 player = NodePath("../../Player")
@@ -226,6 +242,7 @@ position = Vector2(32, 58.5)
 shape = SubResource("RectangleShape2D_18giq")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls/Desks"]
+visible = false
 z_index = 1
 y_sort_enabled = true
 position = Vector2(87.75, 58)
@@ -254,11 +271,13 @@ region_enabled = true
 region_rect = Rect2(16, 64, 32, 15)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls/Desks"]
-y_sort_enabled = true
+visible = false
+z_index = 1
 position = Vector2(176, 91)
 shape = SubResource("RectangleShape2D_ihh7m")
 
 [node name="Sprite2D" type="Sprite2D" parent="Walls/Desks/CollisionShape2D4"]
+visible = false
 z_index = 1
 y_sort_enabled = true
 position = Vector2(-1, -3)
@@ -274,7 +293,13 @@ shape = SubResource("RectangleShape2D_ihh7m")
 position = Vector2(272, 91)
 shape = SubResource("RectangleShape2D_ihh7m")
 
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Walls/Desks/CollisionShape2D6"]
+position = Vector2(272, 91)
+shape = SubResource("RectangleShape2D_ihh7m")
+
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Walls/Desks"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(176, 123)
 shape = SubResource("RectangleShape2D_ihh7m")
 
@@ -282,9 +307,17 @@ shape = SubResource("RectangleShape2D_ihh7m")
 position = Vector2(224, 123)
 shape = SubResource("RectangleShape2D_ihh7m")
 
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Walls/Desks"]
+position = Vector2(175.25, 90.75)
+shape = SubResource("RectangleShape2D_ihh7m")
+
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Walls/Desks"]
 position = Vector2(272, 123)
 shape = SubResource("RectangleShape2D_ihh7m")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Walls/Desks"]
+position = Vector2(88, 58.5)
+shape = SubResource("RectangleShape2D_18giq")
 
 [node name="Walls" type="StaticBody2D" parent="Walls"]
 collision_mask = 30
