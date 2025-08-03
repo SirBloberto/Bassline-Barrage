@@ -1,0 +1,70 @@
+[gd_scene load_steps=6 format=3 uid="uid://bnvisxcx45eml"]
+
+[ext_resource type="Script" uid="uid://detappavtqek7" path="res://ui/main_menu/main_menu.gd" id="1_3c04x"]
+[ext_resource type="Texture2D" uid="uid://dpc8rm4pqowh3" path="res://resources/ui_components/ui_page_bg.png" id="1_i5wg5"]
+[ext_resource type="Texture2D" uid="uid://c41csmiboigsk" path="res://resources/ui_components/title_160_80.png" id="2_3c04x"]
+[ext_resource type="Texture2D" uid="uid://cs06phbh864nt" path="res://resources/ui_components/menu_button.png" id="3_joh67"]
+[ext_resource type="Script" uid="uid://dgi6lolw2kg32" path="res://ui/hover_button.gd" id="4_u184e"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3c04x")
+
+[node name="bg_color" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_i5wg5")
+
+[node name="title" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 160.0
+offset_bottom = 83.0
+texture = ExtResource("2_3c04x")
+
+[node name="Start Button" type="TextureButton" parent="."]
+self_modulate = Color(0.654902, 0.941176, 0.439216, 1)
+layout_mode = 0
+offset_left = 48.0
+offset_top = 83.0
+offset_right = 112.0
+offset_bottom = 99.0
+action_mode = 0
+texture_normal = ExtResource("3_joh67")
+script = ExtResource("4_u184e")
+
+[node name="Settings Button" type="TextureButton" parent="."]
+self_modulate = Color(0.45098, 0.937255, 0.968627, 1)
+offset_left = 48.0
+offset_top = 103.0
+offset_right = 112.0
+offset_bottom = 119.0
+action_mode = 0
+texture_normal = ExtResource("3_joh67")
+script = ExtResource("4_u184e")
+
+[node name="Exit Button" type="TextureButton" parent="."]
+self_modulate = Color(1, 0.803922, 0.458824, 1)
+offset_left = 48.0
+offset_top = 123.0
+offset_right = 112.0
+offset_bottom = 139.0
+action_mode = 0
+texture_normal = ExtResource("3_joh67")
+script = ExtResource("4_u184e")
+
+[connection signal="mouse_entered" from="Start Button" to="Start Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Start Button" to="Start Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Start Button" to="." method="_on_start_button_pressed"]
+[connection signal="mouse_entered" from="Settings Button" to="Settings Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Settings Button" to="Settings Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Settings Button" to="." method="_on_settings_button_pressed"]
+[connection signal="mouse_entered" from="Exit Button" to="Exit Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Exit Button" to="Exit Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Exit Button" to="." method="_on_exit_button_pressed"]
